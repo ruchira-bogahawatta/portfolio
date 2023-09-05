@@ -1,12 +1,13 @@
-import { useState } from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
-
   return (
     <>
-      <div>
-        <h2>Hello</h2>
-      </div>
+      <main>
+        <Navbar />
+        <Hero />
+      </main>
     </>
   );
 }
