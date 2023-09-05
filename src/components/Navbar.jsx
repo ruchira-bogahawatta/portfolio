@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import {
   FaBars,
-  FaCross,
   FaTimes,
   FaCode,
   FaUserAlt,
-  FaStar,
   FaCoffee,
 } from "react-icons/fa";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [activeNav, setActiveNav] = useState("about");
 
   const handleClick = () => setNav(!nav);
 
@@ -19,18 +18,10 @@ const Navbar = () => {
       <div className="hidden md:flex fixed w-full justify-center left-0 top-2">
         {/* Main Menu */}
         <ul className="py-4 px-8 md:flex group gap-8 rounded-3xl bg-white text-center shadow-boxShadowOne text-primaryBlack cursor-pointer font-medium">
-          <li className="hover:text-secondary transition duration-200 ease-in-out hover:scale-110">
-            About
-          </li>
-          <li className="hover:text-secondary transition duration-200 ease-in-out hover:scale-110">
-            Skills
-          </li>
-          <li className="hover:text-secondary transition duration-200 ease-in-out hover:scale-110">
-            Projects
-          </li>
-          <li className="hover:text-secondary transition duration-200 ease-in-out hover:scale-110">
-            Contact
-          </li>
+          <li className="nav-link">About</li>
+          <li className="nav-link">Skills</li>
+          <li className="nav-link">Projects</li>
+          <li className="nav-link">Contact</li>
         </ul>
       </div>
 

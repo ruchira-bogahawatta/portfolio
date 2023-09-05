@@ -8,7 +8,7 @@ export default {
         secondary: "#59CE8F",
         greyColor: "#cacaca",
         backgroundColor: "#F5F5F5",
-        githubColor: "#FF9B50",
+        githubColor: "#504099",
         linkedlnColor: "#0077B5",
       },
       boxShadow: {
