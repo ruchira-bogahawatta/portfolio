@@ -20,7 +20,7 @@ const Skills = () => {
     <>
       <section
         name="skills"
-        className="w-full h-screen p-5 bg-backgroundColor"
+        className="w-full h-full min-h-[100vh] p-5 bg-backgroundColor"
       >
         <div className="flex w-full flex-col items-center">
           <h1 className="text-primaryBlack text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-1">
@@ -95,7 +95,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="w-full px-5 md:px-0">
+          <div className="w-full px-5 md:px-0 mb-8 md:mb-0">
             <div className="flex justify-center mb-5">
               <h2 className="font-medium text-primaryBlack">Back-End & DBMS</h2>
             </div>

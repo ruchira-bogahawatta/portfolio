@@ -5,7 +5,7 @@
 :root {
   /* // Add a variable */
   --primaryBlack: #3e3939;
-  --secondary: #59ce8f;
+  --secondary: #34be82;
   --greyColor: #cacaca;
   --backgroundColor: #f5f5f5;
 }
@@ -61,4 +61,9 @@ ul {
   100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
+}
+
+.custom-timeline:before {
+  background: #cacaca;
+  width: 2px;
 }
