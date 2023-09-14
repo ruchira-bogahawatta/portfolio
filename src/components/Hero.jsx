@@ -31,13 +31,15 @@ const Hero = () => {
             <div>
               {/* Social Icons */}
               <ul className="flex justify-center md:justify-start gap-4 mt-2">
-                <li className="text-primaryBlack opacity-40 text-3xl transition duration-300 ease-in-out hover:scale-110 hover:text-primaryBlack  hover:opacity-80 ">
-                  <a href="">
+                <li className="text-primaryBlack opacity-40 text-3xl transition duration-300 ease-in-out hover:scale-110 hover:text-githubColor  hover:opacity-80 ">
+                  <a href="https://github.com/ruchira-bogahawatta"
+                  target="_blank">
                     <FaGithub />
                   </a>
                 </li>
                 <li className="text-3xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-linkedlnColor  hover:opacity-100 ">
-                  <a href="">
+                  <a href="https://www.linkedin.com/in/ruchira-bogahawatta"
+                  target="_blank">
                     <FaLinkedin />
                   </a>
                 </li>

@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="hidden md:flex fixed w-full justify-center left-0 top-2 z-30">
         {/* Main Menu */}
         <ul
-          className="py-4 px-8 md:flex group gap-8 rounded-3xl  bg-white text-center shadow-boxShadowOne text-primaryBlack cursor-pointer font-medium"
+          className="py-4 px-8 md:flex group gap-8 rounded-3xl bg-white text-center shadow-boxShadowOne text-primaryBlack cursor-pointer font-medium"
           // style={{
           //   backgroundImage: `url(${backgroundImage})`,
           //   objectFit: "contain",
@@ -23,7 +23,6 @@ const Navbar = () => {
           <li className="nav-link font-medium">About</li>
           <li className="nav-link font-medium">Skills</li>
           <li className="nav-link font-medium">Projects</li>
-          <li className="nav-link font-medium">Contact</li>
         </ul>
       </div>
 
@@ -32,25 +31,27 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden"
-            : "md:hidden fixed justify-center p-3 bottom-0 right-0 bg-backgroundColor rounded-tl-3xl rounded-tr-3xl shadow-boxShadowOne z-40"
+            : "md:hidden w-full fixed justify-center p-3 bottom-0 right-0 bg-white rounded-tl-3xl rounded-tr-3xl  z-40 shadow-lg shadow-[rgb(27,27,27)] "
         }
       >
-        <ul className="pb-12 pt-5 px-5 md:flex w-full grid grid-cols-2 grid-rows-2 gap-10 text-center ">
-          <li className=" flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer active:text-gray-300">
-            <FaUserAlt className="text-xl" />
-            <p className="text-primaryBlack">About</p>
+        <ul className="pb-12 pt-5 px-5 md:flex w-full grid grid-cols-3 gap-10 text-center  ">
+          <li className=" flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer active:text-gray-300 group">
+            <FaUserAlt className="text-xl group-hover:text-secondary" />
+            <p className="text-primaryBlack group-hover:text-secondary">
+              About
+            </p>
           </li>
-          <li className="flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer">
-            <FaCoffee className="text-xl" />
-            <p className="text-primaryBlack">Skills</p>
+          <li className="flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer group">
+            <FaCoffee className="text-xl group-hover:text-secondary" />
+            <p className="text-primaryBlack group-hover:text-secondary">
+              Skills
+            </p>
           </li>
-          <li className="flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer">
-            <FaCode className="text-xl" />
-            <p className="text-primaryBlack">Projects</p>
-          </li>
-          <li className="flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer">
-            <FaCoffee className="text-xl" />
-            <p className="text-primaryBlack">Contact</p>
+          <li className="flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer group ">
+            <FaCode className="text-xl group-hover:text-secondary" />
+            <p className="text-primaryBlack group-hover:text-secondary">
+              Projects
+            </p>
           </li>
         </ul>
       </div>
