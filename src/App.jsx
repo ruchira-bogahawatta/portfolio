@@ -2,6 +2,9 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Background from "./components/Background";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
@@ -10,6 +13,8 @@ function App() {
       <Hero />
       <Skills />
       <Background />
+      <Projects />
+      <Footer />
     </div>
   );
 }

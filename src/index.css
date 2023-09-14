@@ -6,8 +6,10 @@
   /* // Add a variable */
   --primaryBlack: #3e3939;
   --secondary: #34be82;
+  --secondaryAccent: #1aaf6e;
   --greyColor: #cacaca;
   --backgroundColor: #f5f5f5;
+  --dangerColor: #df4242;
 }
 
 * {
@@ -19,6 +21,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--backgroundColor);
 }
 
 button {

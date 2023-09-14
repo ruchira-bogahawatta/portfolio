@@ -6,10 +6,12 @@ export default {
       colors: {
         primaryBlack: "#3E3939",
         secondary: "#34BE82",
+        secondaryAccent: "#1aaf6e",
         greyColor: "#cacaca",
         backgroundColor: "#F5F5F5",
         githubColor: "#504099",
         linkedlnColor: "#0077B5",
+        dangerColor: "#df4242"
       },
       screens: {
         xl: "1170px",

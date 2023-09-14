@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes, FaCode, FaUserAlt, FaCoffee } from "react-icons/fa";
+import backgroundImage from "../assets/images/darkmode.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -9,13 +10,20 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="hidden md:flex fixed w-full justify-center left-0 top-2 z-50">
+      <div className="hidden md:flex fixed w-full justify-center left-0 top-2 z-30">
         {/* Main Menu */}
-        <ul className="py-4 px-8 md:flex group gap-8 rounded-3xl  bg-white text-center shadow-boxShadowOne text-primaryBlack cursor-pointer font-medium">
-          <li className="nav-link">About</li>
-          <li className="nav-link">Skills</li>
-          <li className="nav-link">Projects</li>
-          <li className="nav-link">Contact</li>
+        <ul
+          className="py-4 px-8 md:flex group gap-8 rounded-3xl  bg-white text-center shadow-boxShadowOne text-primaryBlack cursor-pointer font-medium"
+          // style={{
+          //   backgroundImage: `url(${backgroundImage})`,
+          //   objectFit: "contain",
+          //   // Add other CSS properties as needed
+          // }}
+        >
+          <li className="nav-link font-medium">About</li>
+          <li className="nav-link font-medium">Skills</li>
+          <li className="nav-link font-medium">Projects</li>
+          <li className="nav-link font-medium">Contact</li>
         </ul>
       </div>
 
