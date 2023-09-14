@@ -1,6 +1,6 @@
 import React from "react";
 import projects from "../assets/data/projectsData";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaArrowRight } from "react-icons/fa";
 import SlideShow from "./SlideShow";
 
 const ProjectModal = ({ activeID, setShowModal }) => {
@@ -21,12 +21,12 @@ const ProjectModal = ({ activeID, setShowModal }) => {
               {project.title}
             </h2>
             <p className="text-sm text-justify">{project.description}</p>
-            <div className="flex items-center flex-wrap gap-2">
-              <h4 className="font-medium text-sm ">Technologies : </h4>
+            <div className="flex items-center flex-wrap gap-2 mt-2 ">
+              <h4 className="font-medium text-sm">Technologies : </h4>
               {project.technologies.map((item, index) => (
                 <span
                   key={index}
-                  className="text-sm font-medium bg-greyColor bg-opacity-60 py-1 px-2 rounded-sm text-primaryBlack leading-0"
+                  className="text-sm bg-greyColor bg-opacity-50 py-1 px-2 rounded-md text-primaryBlack text-opacity-70 leading-0"
                 >
                   {item}
                 </span>
@@ -34,7 +34,23 @@ const ProjectModal = ({ activeID, setShowModal }) => {
             </div>
             <div className="flex justify-between mt-2">
               <button className="text-sm rounded-md bg-secondary py-2 px-4 cursor-pointer hover:bg-secondaryAccent text-white ease-in duration-200">
-                <a href=""> View Code</a>
+                {project.github ? (
+                  <a
+                    href={project.siteUrl}
+                    target="_blank"
+                    className="flex gap-1 items-center"
+                  >
+                    <FaGithub className="text-2xl " /> Code
+                  </a>
+                ) : (
+                  <a
+                    href={project.siteUrl}
+                    target="_blank"
+                    className="flex gap-[3px] items-center"
+                  >
+                    View <FaArrowRight className="text-xl " />
+                  </a>
+                )}
               </button>
               <button
                 onClick={() => setShowModal(false)}

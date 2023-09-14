@@ -26,7 +26,7 @@ const SlideShow = ({ imgUrl  }) => {
 
   return (
     <>
-      <div className="h-[230px] w-full relative group mb-5">
+      <div className="h-[200px] sm:h-[230px] w-full relative group mb-5">
         <div
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
@@ -44,7 +44,7 @@ const SlideShow = ({ imgUrl  }) => {
             <div
               key={slideIndex}
               onClick={() => goToSlide(slideIndex)}
-              className="text-2xl cursor-pointer"
+              className="text-2xl cursor-pointer text-greyColor"
             >
               <RxDotFilled />
             </div>

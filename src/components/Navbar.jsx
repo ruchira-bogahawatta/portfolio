@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes, FaCode, FaUserAlt, FaCoffee } from "react-icons/fa";
-import backgroundImage from "../assets/images/darkmode.png";
+import { Link } from "react-scroll";
+import {
+  FaBars,
+  FaTimes,
+  FaCode,
+  FaUserAlt,
+  FaCoffee,
+  FaShapes,
+} from "react-icons/fa";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const [activeNav, setActiveNav] = useState("about");
-
   const handleClick = () => setNav(!nav);
 
   return (
@@ -20,9 +25,61 @@ const Navbar = () => {
           //   // Add other CSS properties as needed
           // }}
         >
-          <li className="nav-link font-medium">About</li>
-          <li className="nav-link font-medium">Skills</li>
-          <li className="nav-link font-medium">Projects</li>
+          <li className="nav-link font-medium">
+            <Link
+              activeClass="active"
+              to="hero"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              {" "}
+              About
+            </Link>
+          </li>
+          <li className="nav-link font-medium">
+            {" "}
+            <Link
+              activeClass="active"
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              {" "}
+              Skills
+            </Link>{" "}
+          </li>
+          <li className="nav-link font-medium">
+            {" "}
+            <Link
+              activeClass="active"
+              to="background"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              {" "}
+              Background
+            </Link>
+          </li>
+          <li className="nav-link font-medium">
+            {" "}
+            <Link
+              activeClass="active"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              {" "}
+              Projects
+            </Link>
+          </li>
         </ul>
       </div>
 
@@ -31,27 +88,64 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden"
-            : "md:hidden w-full fixed justify-center p-3 bottom-0 right-0 bg-white rounded-tl-3xl rounded-tr-3xl  z-40 shadow-lg shadow-[rgb(27,27,27)] "
+            : "md:hidden fixed justify-center p-3 bottom-0 right-0 bg-white rounded-tl-3xl rounded-tr-3xl  z-40 shadow-md shadow-[#cacaca] "
         }
       >
-        <ul className="pb-12 pt-5 px-5 md:flex w-full grid grid-cols-3 gap-10 text-center  ">
+        <ul className="pb-12 pt-5 px-5 md:flex w-full grid grid-cols-2 grid-rows-2 gap-10 text-center  ">
           <li className=" flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer active:text-gray-300 group">
-            <FaUserAlt className="text-xl group-hover:text-secondary" />
-            <p className="text-primaryBlack group-hover:text-secondary">
+            <Link
+              activeClass="active"
+              to="hero"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className="nav-link flex items-center flex-col group-hover:text-secondary"
+            >
+              <FaUserAlt className="text-xl" />
               About
-            </p>
+            </Link>
           </li>
           <li className="flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer group">
-            <FaCoffee className="text-xl group-hover:text-secondary" />
-            <p className="text-primaryBlack group-hover:text-secondary">
+            <Link
+              activeClass="active"
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className="nav-link flex items-center flex-col group-hover:text-secondary"
+            >
+              <FaCoffee className="text-xl " />
               Skills
-            </p>
+            </Link>
           </li>
-          <li className="flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer group ">
-            <FaCode className="text-xl group-hover:text-secondary" />
-            <p className="text-primaryBlack group-hover:text-secondary">
-              Projects
-            </p>
+          <li className="nav-link flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer group ">
+            <Link
+              activeClass="active"
+              to="background"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className="flex items-center flex-col group-hover:text-secondary"
+            >
+              <FaShapes className="text-xl " />
+              Background
+            </Link>
+          </li>
+          <li className="nav-link flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer group ">
+            <Link
+              activeClass="active"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className="flex items-center flex-col group-hover:text-secondary"
+            >
+              <FaCode className="text-xl " /> Projects
+            </Link>
           </li>
         </ul>
       </div>

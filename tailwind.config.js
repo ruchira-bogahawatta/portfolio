@@ -11,7 +11,7 @@ export default {
         backgroundColor: "#F5F5F5",
         githubColor: "#25195c",
         linkedlnColor: "#0077B5",
-        dangerColor: "#df4242"
+        dangerColor: "#df4242",
       },
       screens: {
         xl: "1170px",

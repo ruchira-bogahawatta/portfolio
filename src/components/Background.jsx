@@ -4,23 +4,17 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { GiGraduateCap } from "react-icons/gi";
-import { BiSolidBriefcase } from "react-icons/bi";
-import { PiCertificateFill } from "react-icons/pi";
-
+import { FaAward, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 
 const Background = () => {
   return (
-    <section
-      name="background"
-      className="w-full h-full p-5 pt-12 sm:pt-0"
-    >
+    <section id="background" className="w-full h-full p-5 pt-12 sm:pt-0">
       <div className="flex w-full flex-col items-center">
         <h1 className="text-primaryBlack text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-1">
           Background
         </h1>
         <p className="text-primaryBlack font-normal text-center text-sm sm:text-lg px-5 sm:px-10 md:px-0 text-opacity-50 my-5">
-        An overview of my academic and professional background
+          An overview of my academic and professional background
         </p>
         {/* timeline */}
         <div className="w-[95%] md:w-[60%] lg:w-[60%] xl:w-[90%] xl:max-w-[1200px] ">
@@ -44,9 +38,9 @@ const Background = () => {
                 boxShadow: "none",
                 border: "2px solid #cacaca",
               }}
-              icon={<GiGraduateCap />}
+              icon={<FaGraduationCap />}
             >
-              <h3 className="font-semibold mb-3">
+              <h3 className="font-semibold mb-3 ">
                 University of Colombo School of Computing
               </h3>
               <h4 className="text-secondary m-0">
@@ -73,7 +67,7 @@ const Background = () => {
                 boxShadow: "none",
                 border: "2px solid #cacaca",
               }}
-              icon={<BiSolidBriefcase />}
+              icon={<FaBriefcase />}
             >
               <h3 className="font-semibold mb-3">
                 Search Engine Optimization Intern
@@ -107,7 +101,7 @@ const Background = () => {
                 boxShadow: "none",
                 border: "2px solid #cacaca",
               }}
-              icon={<GiGraduateCap />}
+              icon={<FaGraduationCap />}
             >
               <h3 className="font-semibold mb-3">St. Joseph’s College</h3>
               <h4 className="text-secondary m-0">
@@ -134,7 +128,7 @@ const Background = () => {
                 boxShadow: "none",
                 border: "2px solid #cacaca",
               }}
-              icon={<PiCertificateFill />}
+              icon={<FaAward />}
             >
               <h3 className="font-semibold mb-3">
                 National Institute of Business Management
@@ -162,7 +156,7 @@ const Background = () => {
                 boxShadow: "none",
                 border: "2px solid #cacaca",
               }}
-              icon={<GiGraduateCap />}
+              icon={<FaGraduationCap />}
             >
               <h3 className="font-semibold mb-3">Carey College</h3>
               <h4 className="text-secondary m-0">

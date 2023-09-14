@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import data from "../assets/data/projectsData";
 import ProjectModal from "./ProjectModal";
-import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 const Projects = () => {
@@ -27,11 +26,11 @@ const Projects = () => {
         </p>
         <div className="w-[100%] sm:w-[90%]  grid grid-cols-1  sm:grid-cols-2  lg:grid-cols-3  gap-5 text-center px-5 lg:px-10">
           {data?.map((project, index) => (
-            <div className="group rounded-lg overflow-hidden relative z-[1]  shadow-md shadow-[#cacaca]">
+            <div key={index} className="group rounded-lg overflow-hidden relative z-[1]  shadow-md shadow-[#cacaca]">
               <figure>
                 <img src={project.imgUrl[0]} alt="Project" />
               </figure>
-              <div className="bg-primaryBlack cursor-pointer bg-opacity-40 absolute w-full h-full top-0 left-0 z-[5] hidden group-hover:block">
+              <div className="bg-primaryBlack cursor-pointer bg-opacity-40 absolute w-full h-full top-0 left-0 z-[5] hidden group-hover:block ">
                 <div className="w-full h-full flex items-center justify-center">
                   <button
                     onClick={() => showModalHandler(project.id)}
