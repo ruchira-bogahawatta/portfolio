@@ -48,7 +48,7 @@ const Background = () => {
                 BSc. (Hons) in Information Systems
               </h4>
               <h4 className=" font-medium !m-0 !mt-2 text-xs md:text-base">
-                CGPA : 3.76
+                CGPA : 3.78
               </h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -73,7 +73,7 @@ const Background = () => {
               icon={<FaBriefcase />}
             >
               <h3 className="font-semibold mb-3 text-sm md:text-base">
-                Search Engine Optimization Intern
+                SEO & Digital Marketing Intern
               </h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">
                 Commercial Technologies Plus
@@ -106,11 +106,15 @@ const Background = () => {
               }}
               icon={<FaGraduationCap />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base">St. Joseph’s College</h3>
+              <h3 className="font-semibold mb-3 text-sm md:text-base">
+                St. Joseph’s College
+              </h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">
                 2A's 1B - GCE Advanced Level
               </h4>
-              <h4 className="font-medium !m-0 !mt-2 text-xs md:text-base">Z-Score : 1.91</h4>
+              <h4 className="font-medium !m-0 !mt-2 text-xs md:text-base">
+                Z-Score : 1.91
+              </h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
@@ -161,7 +165,9 @@ const Background = () => {
               }}
               icon={<FaGraduationCap />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base">Carey College</h3>
+              <h3 className="font-semibold mb-3 text-sm md:text-base">
+                Carey College
+              </h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">
                 8A's 1B -GCE Ordinary Level
               </h4>
