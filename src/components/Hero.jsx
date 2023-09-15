@@ -7,12 +7,13 @@ const Hero = () => {
   return (
     <>
       <section id="hero" className="w-full h-screen">
-        <div className="flex flex-col md:flex-row justify-center items-center h-full gap-2 sm:gap-8 sm:px-8">
+        <div className="flex flex-col md:flex-row pt-[20%] sm:pt-0 sm:justify-center items-center h-full gap-2 sm:gap-8 sm:px-8">
           <div className="flex justify-center rounded-[50%] md:mb-5 ">
             <img
-              className="heroImage w-[100%] max-w-[300px] sm:max-w-[350px]"
+            className="heroImage w-[100%] max-w-[300px] sm:max-w-[350px] heroFadeIn"
               src={profileImage}
               alt="Profile Image"
+              loading="lazy"
             />
           </div>
           <div className="flex flex-col text-center md:w-[50%] md:text-left">

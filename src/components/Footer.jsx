@@ -20,14 +20,14 @@ const Footer = () => {
             </h2>
             <div className="flex items-center gap-3">
               <a
-                href="https://github.com/ruchira-bogahawatta"
+                href="https://www.linkedin.com/in/ruchira-bogahawatta"
                 target="_blank"
                 className="text-2xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-linkedlnColor hover:opacity-100 "
               >
                 <FaLinkedin />
               </a>
               <a
-                href="https://www.linkedin.com/in/ruchira-bogahawatta"
+                href="https://github.com/ruchira-bogahawatta"
                 target="_blank"
                 className="text-2xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-githubColor  hover:opacity-80 "
               >

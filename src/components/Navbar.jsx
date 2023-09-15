@@ -29,12 +29,10 @@ const Navbar = () => {
               offset={0}
               duration={500}
             >
-              {" "}
               About
             </Link>
           </li>
           <li className="nav-link font-medium">
-            {" "}
             <Link
               activeClass="active"
               to="skills"
@@ -43,12 +41,10 @@ const Navbar = () => {
               offset={-100}
               duration={500}
             >
-              {" "}
               Skills
-            </Link>{" "}
+            </Link>
           </li>
           <li className="nav-link font-medium">
-            {" "}
             <Link
               activeClass="active"
               to="background"
@@ -57,12 +53,10 @@ const Navbar = () => {
               offset={-100}
               duration={500}
             >
-              {" "}
               Background
             </Link>
           </li>
           <li className="nav-link font-medium">
-            {" "}
             <Link
               activeClass="active"
               to="projects"
@@ -71,7 +65,6 @@ const Navbar = () => {
               offset={-100}
               duration={500}
             >
-              {" "}
               Projects
             </Link>
           </li>
@@ -86,7 +79,7 @@ const Navbar = () => {
             : "md:hidden fixed justify-center p-3 bottom-0 right-0 bg-white rounded-tl-3xl rounded-tr-3xl  z-40 shadow-md shadow-[#cacaca] "
         }
       >
-        <ul className="pb-12 pt-5 px-5 md:flex w-full grid grid-cols-2 grid-rows-2 gap-10 text-center  ">
+        <ul className="pb-[4.5rem] pt-6 px-5 md:flex w-full grid grid-cols-2 grid-rows-2 gap-10 text-center  ">
           <li className=" flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer active:text-gray-300 group">
             <Link
               activeClass="active"
@@ -111,11 +104,11 @@ const Navbar = () => {
               duration={500}
               className="nav-link flex items-center flex-col group-hover:text-secondary"
             >
-              <FaCoffee className="text-xl " />
+              <FaCoffee className="text-xl" />
               Skills
             </Link>
           </li>
-          <li className="nav-link flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer group ">
+          <li className="flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer group ">
             <Link
               activeClass="active"
               to="background"
@@ -123,13 +116,13 @@ const Navbar = () => {
               smooth={true}
               offset={-50}
               duration={500}
-              className="flex items-center flex-col group-hover:text-secondary"
+              className="nav-link flex items-center flex-col group-hover:text-secondary"
             >
               <FaShapes className="text-xl " />
               Background
             </Link>
           </li>
-          <li className="nav-link flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer group ">
+          <li className="flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer group ">
             <Link
               activeClass="active"
               to="projects"
@@ -137,7 +130,7 @@ const Navbar = () => {
               smooth={true}
               offset={-40}
               duration={500}
-              className="flex items-center flex-col group-hover:text-secondary"
+              className="nav-link flex items-center flex-col group-hover:text-secondary"
             >
               <FaCode className="text-xl " /> Projects
             </Link>
@@ -148,9 +141,9 @@ const Navbar = () => {
       {/* Close Icon or Hamburger Item */}
       <div
         onClick={handleClick}
-        className="md:hidden right-4 fixed bottom-3 border border-greyColor p-2 rounded-md cursor-pointer z-40 text-greyColor bg-white shadow-md shadow-[#cacaca]"
+        className="md:hidden right-8 fixed bottom-8 border border-greyColor p-2 rounded-md cursor-pointer z-40 text-greyColor bg-white shadow-md shadow-[#cacaca]"
       >
-        {!nav ? <FaBars /> : <FaTimes />}
+        {!nav ? <FaBars className="text-2xl"/> : <FaTimes className="text-2xl" />}
       </div>
     </>
   );

@@ -61,18 +61,18 @@ ul {
 }
 
 .heroImage {
+  animation: morph 8s ease-in-out infinite !important;
   object-fit: cover;
   box-shadow: inset 0 0 0 9px rgba(255, 255, 255, 40%);
   border: 7px solid #cacaca;
-  animation: morph 8s ease-in-out infinite 1s;
 }
 
-#footerImage{
-  border: 3px solid #cacaca;
-
+#footerImage {
+  border: 4px solid #cacaca;
+  transition: all 0.3s ease-in-out;
 }
 .scaleUp {
-  transform:scale(1.8)
+  transform: scale(1.8);
 }
 
 @keyframes morph {
@@ -91,5 +91,3 @@ ul {
   background: #cacaca;
   width: 2px;
 }
-
-/* Navbar Hover */

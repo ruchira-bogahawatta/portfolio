@@ -6,9 +6,9 @@ const SkillCard = ({ IconUrl, alt, scale = 100, width = 50, additionalClass = ""
 
 
   return (
-    <div className="rounded-lg shadow-md shadow-[#cacaca] p-2">
+    <div className="rounded-lg shadow-md shadow-[#cacaca] p-2 hover:scale-105 transition-all duration-300 ease-in-out">
       <img
-        className={`${widthClass} ${scaleClass} max-w-[50px] mx-auto  ${additionalClass}`}
+        className={`${widthClass} ${scaleClass} max-w-[50px] mx-auto  ${additionalClass} `}
         src={IconUrl}
         alt={alt}
       />

@@ -32,7 +32,7 @@ const Background = () => {
               contentArrowStyle={{
                 borderRight: "7px solid  #3e3939",
               }}
-              date="2021 - present"
+              date="2021 - Present"
               iconStyle={{
                 background: "rgb(245, 245, 245)",
                 color: "#34be82",
