@@ -7,10 +7,10 @@ const Hero = () => {
   return (
     <>
       <section id="hero" className="w-full h-screen">
-        <div className="flex flex-col md:flex-row justify-center items-center h-full  gap-3 sm:gap-5 md:gap-10 md:px-10">
-          <div className="flex justify-center rounded-[50%] px-10 mb-5">
+        <div className="flex flex-col md:flex-row justify-center items-center h-full gap-2 sm:gap-8 sm:px-8">
+          <div className="flex justify-center rounded-[50%] md:mb-5 ">
             <img
-              className="heroImage w-[100%] max-w-[350px]"
+              className="heroImage w-[100%] max-w-[300px] sm:max-w-[350px]"
               src={profileImage}
               alt="Profile Image"
             />
@@ -34,10 +34,10 @@ const Hero = () => {
                 repeat={Infinity}
               />
             </p>
-            <p className="text-primaryBlack font-normal text-center md:text-left text-sm sm:text-lg px-5 sm:px-10 md:px-0 text-opacity-80">
+            <p className="text-primaryBlack font-normal text-center text-sm sm:text-lg px-5 sm:px-10 md:px-0 text-opacity-80 md:text-justify">
               A driven undergraduate pursuing a BSc (Hons) in Information
               Systems at the University of Colombo School of Computing with the
-              aim of building expertise in the field of Software Engineering.
+              aim of building expertise in the field of Software Engineering
             </p>
             <div>
               {/* Social Icons */}

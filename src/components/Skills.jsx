@@ -27,12 +27,13 @@ const Skills = () => {
           <h1 className="text-primaryBlack text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-1">
             Tech Stack
           </h1>
-          <p className="text-primaryBlack font-normal text-center text-sm sm:text-lg px-5 my-5 sm:px-10 md:px-0 text-opacity-40">
-            These are the technologies I've had hands-on experience with,
-            including various libraries and frameworks.
+          <p className="text-primaryBlack font-normal text-center text-sm sm:text-lg  my-5 sm:px-10 md:px-[5rem] text-opacity-40">
+            Here is an overview of the technologies I have gained hands-on
+            experience with, including various libraries and frameworks, up to
+            this point
           </p>
         </div>
-        <div className="flex justify-center flex-col md:flex-row w-full gap-8 mt-5">
+        <div className="flex justify-center flex-col md:flex-row w-full gap-10 sm:gap-8 mt-5">
           <div className="w-full px-5 md:px-0">
             <div className="flex justify-center mb-5">
               <h2 className="font-medium text-primaryBlack">Front-End</h2>
@@ -44,7 +45,6 @@ const Skills = () => {
                 IconUrl={tailwindcss}
                 alt="TailwindCSS"
                 additionalClass="scale-[1.6]"
-                
               />
               <SkillCard IconUrl={dart} alt="Dart" scale={0.5} />
               <SkillCard IconUrl={html} alt="HTML" />

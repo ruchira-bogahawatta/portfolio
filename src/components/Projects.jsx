@@ -22,7 +22,7 @@ const Projects = () => {
           Projects
         </h1>
         <p className="text-primaryBlack font-normal text-center text-sm sm:text-lg px-5 sm:px-10 md:px-0 text-opacity-50 my-5">
-          Take a look at the recent projects I have worked on
+          Take a peek at the recent projects I have worked on
         </p>
         <div className="w-[100%] sm:w-[90%]  grid grid-cols-1  sm:grid-cols-2  lg:grid-cols-3  gap-5 text-center px-5 lg:px-10">
           {data?.map((project, index) => (

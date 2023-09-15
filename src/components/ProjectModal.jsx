@@ -17,7 +17,7 @@ const ProjectModal = ({ activeID, setShowModal }) => {
             <SlideShow imgUrl={project.imgUrl} />
           </figure>
           <div className="flex flex-col w-full gap-2">
-            <h2 className="text-xl text-primaryBlack mt-3 font-semibold">
+            <h2 className="text-base md:text-xl text-primaryBlack mt-3 font-semibold ">
               {project.title}
             </h2>
             <p className="text-sm text-justify">{project.description}</p>

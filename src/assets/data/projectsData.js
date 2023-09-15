@@ -11,7 +11,7 @@ const projects = [
     imgUrl: [ayura, ayura2],
     title: "Ayura (A Personal Health App)",
     description:
-      "Ayura is an all in one mobile application where users can proactively maintain and track their personal health. It serves as the user’s constant companion, providing them with the tools, guidance, and support to stay on top of their well-being.",
+      "Ayura is an all in one mobile application where users can proactively maintain and track their personal health. A constant companion that helps users stay on top of their well-being.",
     technologies: ["Flutter", ".NET", "MongoDB"],
     siteUrl: "https://github.com/orgs/team-ayura/repositories",
     github: true,

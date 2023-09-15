@@ -19,11 +19,6 @@ const Navbar = () => {
         {/* Main Menu */}
         <ul
           className="py-4 px-8 md:flex group gap-8 rounded-3xl bg-white text-center shadow-boxShadowOne text-primaryBlack cursor-pointer font-medium"
-          // style={{
-          //   backgroundImage: `url(${backgroundImage})`,
-          //   objectFit: "contain",
-          //   // Add other CSS properties as needed
-          // }}
         >
           <li className="nav-link font-medium">
             <Link
@@ -112,7 +107,7 @@ const Navbar = () => {
               to="skills"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-70}
               duration={500}
               className="nav-link flex items-center flex-col group-hover:text-secondary"
             >
@@ -126,7 +121,7 @@ const Navbar = () => {
               to="background"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-50}
               duration={500}
               className="flex items-center flex-col group-hover:text-secondary"
             >
@@ -140,7 +135,7 @@ const Navbar = () => {
               to="projects"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-40}
               duration={500}
               className="flex items-center flex-col group-hover:text-secondary"
             >
