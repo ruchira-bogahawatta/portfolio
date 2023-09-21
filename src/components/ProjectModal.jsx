@@ -48,7 +48,7 @@ const ProjectModal = ({ activeID, setShowModal }) => {
                     target="_blank"
                     className="flex gap-[3px] items-center"
                   >
-                    View <FaArrowRight className="text-xl " />
+                    View <FaArrowRight className="text-base" />
                   </a>
                 )}
               </button>

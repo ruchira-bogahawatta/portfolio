@@ -14,6 +14,7 @@ import css from "../assets/images/technologies/css3.svg";
 import dart from "../assets/images/technologies/dart.svg";
 import mysql from "../assets/images/technologies/mysql.svg";
 import mongodb from "../assets/images/technologies/mongodb.svg";
+import java from "../assets/images/technologies/java.svg";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
@@ -70,6 +71,7 @@ const Skills = () => {
                 additionalClass="md:scale-125"
               />
               <SkillCard IconUrl={php} alt="PHP" />
+              <SkillCard IconUrl={java} alt="Java" />
               <SkillCard IconUrl={cSharp} alt="c#" scale={90} />
               <SkillCard
                 IconUrl={mongodb}

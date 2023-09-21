@@ -1,5 +1,10 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebookSquare,
+  FaInstagram,
+} from "react-icons/fa";
 import { MdAttachEmail } from "react-icons/md";
 import profileImg from "../assets/images/profileImg.jpg";
 
@@ -32,6 +37,13 @@ const Footer = () => {
                 className="text-2xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-githubColor  hover:opacity-80 "
               >
                 <FaGithub />
+              </a>
+              <a
+                href="https://www.facebook.com/ruchira.bogahawatta/"
+                target="_blank"
+                className="text-2xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-linkedlnColor  hover:opacity-80 "
+              >
+                <FaFacebookSquare />
               </a>
               <a
                 href="mailto:ruchira.bogahawatta@gmail.com"
