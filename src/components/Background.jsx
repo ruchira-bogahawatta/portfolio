@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { FaAward, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 
@@ -14,8 +11,7 @@ const Background = () => {
           Background
         </h1>
         <p className="text-primaryBlack font-normal text-center text-sm sm:text-lg px-5 sm:px-10 md:px-0 text-opacity-50 my-5">
-          An overview of my academic journey and professional experiences up to
-          date
+          An overview of my academic journey and professional experiences up to date
         </p>
         {/* timeline */}
         <div className="w-[95%] md:w-[60%] lg:w-[60%] xl:w-[90%] xl:max-w-[1200px] ">
@@ -44,11 +40,35 @@ const Background = () => {
               <h3 className="font-semibold mb-3 text-sm md:text-base">
                 University of Colombo School of Computing
               </h3>
-              <h4 className="text-secondary m-0 text-sm md:text-base">
-                BSc. (Hons) in Information Systems
-              </h4>
-              <h4 className=" font-medium !m-0 !mt-2 text-xs md:text-base">
-                CGPA : 3.78
+              <h4 className="text-secondary m-0 text-sm md:text-base">BSc. (Hons) in Information Systems</h4>
+              <h4 className=" font-medium !m-0 !mt-2 text-xs md:text-base">CGPA : 3.74</h4>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--education"
+              contentStyle={{
+                background: "rgb(245, 245, 245)",
+                color: "#3e3939",
+                boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+                borderRadius: "0.8rem",
+                border: "1px solid rgba(202, 202, 202, 0.4)",
+              }}
+              contentArrowStyle={{
+                borderRight: "7px solid  #3e3939",
+              }}
+              date="Nov 2023 - May 2024"
+              iconStyle={{
+                background: "rgb(245, 245, 245)",
+                color: "#34be82",
+                boxShadow: "none",
+                border: "2px solid #cacaca",
+              }}
+              icon={<FaBriefcase />}
+            >
+              <h3 className="font-semibold mb-3 text-sm md:text-base">Software Engineer Intern</h3>
+              <h4 className="text-secondary m-0 text-sm md:text-base">MillenniumIT ESP</h4>
+              <h4 className="!font-normal !m-0 !mt-2 text-justify text-xs md:text-base">
+                Contributed to the development of a real-world CSR project using JavaScript and Java
+                frameworks for the frontend and backend. Actively took part in code reviews and knowledge transfer sessions to enhance code quality, consistency, and team collaboration.
               </h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -72,16 +92,11 @@ const Background = () => {
               }}
               icon={<FaBriefcase />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base">
-                SEO & Digital Marketing Intern
-              </h3>
-              <h4 className="text-secondary m-0 text-sm md:text-base">
-                Commercial Technologies Plus
-              </h4>
+              <h3 className="font-semibold mb-3 text-sm md:text-base">SEO & Digital Marketing Intern</h3>
+              <h4 className="text-secondary m-0 text-sm md:text-base">Commercial Technologies Plus</h4>
               <h4 className="!font-normal !m-0 !mt-2 text-justify text-xs md:text-base">
-                I actively engaged in key aspects of digital marketing. This
-                included SEO work on the Billable Global website, alongside
-                responsibilities in social media marketing and web content
+                Engaged in key aspects of digital marketing. This included SEO work on the Billable
+                Global website, alongside responsibilities in social media marketing and web content
                 development for various projects.
               </h4>
             </VerticalTimelineElement>
@@ -106,15 +121,9 @@ const Background = () => {
               }}
               icon={<FaGraduationCap />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base">
-                St. Joseph’s College
-              </h3>
-              <h4 className="text-secondary m-0 text-sm md:text-base">
-                2A's 1B - GCE Advanced Level
-              </h4>
-              <h4 className="font-medium !m-0 !mt-2 text-xs md:text-base">
-                Z-Score : 1.91
-              </h4>
+              <h3 className="font-semibold mb-3 text-sm md:text-base">St. Joseph’s College</h3>
+              <h4 className="text-secondary m-0 text-sm md:text-base">2A's 1B - GCE Advanced Level</h4>
+              <h4 className="font-medium !m-0 !mt-2 text-xs md:text-base">Z-Score : 1.91</h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
@@ -140,9 +149,7 @@ const Background = () => {
               <h3 className="font-semibold mb-3 text-sm md:text-base">
                 National Institute of Business Management
               </h3>
-              <h4 className="text-secondary m-0 text-sm md:text-base">
-                Certificate in Computer Science
-              </h4>
+              <h4 className="text-secondary m-0 text-sm md:text-base">Certificate in Computer Science</h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
@@ -165,12 +172,8 @@ const Background = () => {
               }}
               icon={<FaGraduationCap />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base">
-                Carey College
-              </h3>
-              <h4 className="text-secondary m-0 text-sm md:text-base">
-                8A's 1B -GCE Ordinary Level
-              </h4>
+              <h3 className="font-semibold mb-3 text-sm md:text-base">Carey College</h3>
+              <h4 className="text-secondary m-0 text-sm md:text-base">8A's 1B - GCE Ordinary Level</h4>
             </VerticalTimelineElement>
           </VerticalTimeline>
         </div>

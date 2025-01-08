@@ -50,7 +50,7 @@ const Navbar = () => {
               to="background"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-120}
               duration={500}
             >
               Background
@@ -62,7 +62,7 @@ const Navbar = () => {
               to="projects"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-150}
               duration={500}
             >
               Projects
@@ -79,7 +79,7 @@ const Navbar = () => {
             : "md:hidden fixed justify-center p-3 bottom-0 right-0 bg-white rounded-tl-3xl rounded-tr-3xl  z-40 shadow-md shadow-[#cacaca] "
         }
       >
-        <ul className="pb-[4.5rem] pt-6 px-5 md:flex w-full grid grid-cols-2 grid-rows-2 gap-10 text-center  ">
+        <ul className="pb-[3.5rem] pt-6 px-5 md:flex w-full grid grid-cols-2 grid-rows-2 gap-8 text-center  ">
           <li className=" flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer active:text-gray-300 group">
             <Link
               activeClass="active"
@@ -88,7 +88,7 @@ const Navbar = () => {
               smooth={true}
               offset={-100}
               duration={500}
-              className="nav-link flex items-center flex-col group-hover:text-secondary"
+              className="nav-link flex items-center flex-col "
             >
               <FaUserAlt className="text-xl" />
               About
@@ -100,9 +100,9 @@ const Navbar = () => {
               to="skills"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-120}
               duration={500}
-              className="nav-link flex items-center flex-col group-hover:text-secondary"
+              className="nav-link flex items-center flex-col "
             >
               <FaCoffee className="text-xl" />
               Skills
@@ -116,7 +116,7 @@ const Navbar = () => {
               smooth={true}
               offset={-50}
               duration={500}
-              className="nav-link flex items-center flex-col group-hover:text-secondary"
+              className="nav-link flex items-center flex-col "
             >
               <FaShapes className="text-xl " />
               Background
@@ -130,7 +130,7 @@ const Navbar = () => {
               smooth={true}
               offset={-40}
               duration={500}
-              className="nav-link flex items-center flex-col group-hover:text-secondary"
+              className="nav-link flex items-center flex-col"
             >
               <FaCode className="text-xl " /> Projects
             </Link>
@@ -141,7 +141,7 @@ const Navbar = () => {
       {/* Close Icon or Hamburger Item */}
       <div
         onClick={handleClick}
-        className="md:hidden right-8 fixed bottom-8 border border-greyColor p-2 rounded-md cursor-pointer z-40 text-greyColor bg-white shadow-md shadow-[#cacaca]"
+        className="md:hidden right-4 fixed bottom-4 border border-greyColor p-2 rounded-md cursor-pointer z-40 text-greyColor bg-white shadow-md shadow-[#cacaca]"
       >
         {!nav ? <FaBars className="text-2xl"/> : <FaTimes className="text-2xl" />}
       </div>
