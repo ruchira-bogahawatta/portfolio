@@ -2,6 +2,13 @@ import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { FaAward, FaBriefcase, FaGraduationCap } from "react-icons/fa";
+import ucscLogo from "../assets/images/logos/ucsc.svg";
+import mitlogo from "../assets/images/logos/mitesp.svg";
+import ctpLogo from "../assets/images/logos/ctp.svg";
+import nibmLogo from "../assets/images/logos/nibm.svg";
+import stjLogo from "../assets/images/logos/stj.svg";
+import ccLogo from "../assets/images/logos/cc.svg";
+
 
 const Background = () => {
   return (
@@ -37,7 +44,8 @@ const Background = () => {
               }}
               icon={<FaGraduationCap />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base">
+              <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-1">
+                <img src={ucscLogo} className="rounded-full w-14" alt="ucsc logo" />
                 University of Colombo School of Computing
               </h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">BSc. (Hons) in Information Systems</h4>
@@ -64,7 +72,10 @@ const Background = () => {
               }}
               icon={<FaBriefcase />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base">Software Engineer Intern</h3>
+
+              <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-1">
+              <img src={mitlogo} className="rounded-full w-14" alt="mitesp logo" />
+              Software Engineer Intern</h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">MillenniumIT ESP</h4>
               <h4 className="!font-normal !m-0 !mt-2 text-justify text-xs md:text-base">
                 Contributed to the development of a real-world CSR project using JavaScript and Java
@@ -92,7 +103,9 @@ const Background = () => {
               }}
               icon={<FaBriefcase />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base">SEO & Digital Marketing Intern</h3>
+              <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-0">
+              <img src={ctpLogo} className="rounded-full w-14" alt="ctp logo" />
+                SEO & Digital Marketing Intern</h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">Commercial Technologies Plus</h4>
               <h4 className="!font-normal !m-0 !mt-2 text-justify text-xs md:text-base">
                 Engaged in key aspects of digital marketing. This included SEO work on the Billable
@@ -121,7 +134,9 @@ const Background = () => {
               }}
               icon={<FaGraduationCap />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base">St. Joseph’s College</h3>
+              <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-0">
+              <img src={stjLogo} className="rounded-full w-12" alt="stj logo" />
+              St. Joseph’s College</h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">2A's 1B - GCE Advanced Level</h4>
               <h4 className="font-medium !m-0 !mt-2 text-xs md:text-base">Z-Score : 1.91</h4>
             </VerticalTimelineElement>
@@ -146,7 +161,8 @@ const Background = () => {
               }}
               icon={<FaAward />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base">
+              <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-0">
+              <img src={nibmLogo} className="rounded-full w-14" alt="nibm logo" />
                 National Institute of Business Management
               </h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">Certificate in Computer Science</h4>
@@ -172,7 +188,9 @@ const Background = () => {
               }}
               icon={<FaGraduationCap />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base">Carey College</h3>
+              <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-0">
+              <img src={ccLogo} className="rounded-full w-12" alt="cc logo" />
+              Carey College</h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">8A's 1B - GCE Ordinary Level</h4>
             </VerticalTimelineElement>
           </VerticalTimeline>
