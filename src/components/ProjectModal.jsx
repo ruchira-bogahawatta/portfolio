@@ -17,9 +17,7 @@ const ProjectModal = ({ activeID, setShowModal }) => {
             <SlideShow imgUrl={project.imgUrl} />
           </figure>
           <div className="flex flex-col w-full gap-2">
-            <h2 className="text-base md:text-xl text-primaryBlack mt-3 font-semibold ">
-              {project.title}
-            </h2>
+            <h2 className="text-base md:text-xl text-primaryBlack mt-3 font-semibold ">{project.title}</h2>
             <p className="text-sm text-justify">{project.description}</p>
             <div className="flex items-center flex-wrap gap-2 mt-2 ">
               <h4 className="font-medium text-sm">Technologies : </h4>
@@ -33,25 +31,22 @@ const ProjectModal = ({ activeID, setShowModal }) => {
               ))}
             </div>
             <div className="flex justify-between mt-2">
-              <button className="text-sm rounded-md bg-secondary py-2 px-4 cursor-pointer hover:bg-secondaryAccent text-white ease-in duration-200">
-                {project.github ? (
-                  <a
-                    href={project.siteUrl}
-                    target="_blank"
-                    className="flex gap-1 items-center"
-                  >
-                    <FaGithub className="text-2xl " /> Code
-                  </a>
-                ) : (
-                  <a
-                    href={project.siteUrl}
-                    target="_blank"
-                    className="flex gap-[3px] items-center"
-                  >
-                    View <FaArrowRight className="text-base" />
-                  </a>
-                )}
-              </button>
+              {project.siteUrl ? (
+                <button className="text-sm rounded-md bg-secondary py-2 px-4 cursor-pointer hover:bg-secondaryAccent text-white ease-in duration-200">
+                  {project.github ? (
+                    <a href={project.siteUrl} target="_blank" className="flex gap-1 items-center">
+                      <FaGithub className="text-2xl " /> Code
+                    </a>
+                  ) : (
+                    <a href={project.siteUrl} target="_blank" className="flex gap-[3px] items-center">
+                      View <FaArrowRight className="text-base" />
+                    </a>
+                  )}
+                </button>
+              ) : (
+                <div></div>
+              )}
+
               <button
                 onClick={() => setShowModal(false)}
                 className="text-sm rounded-md text-dangerColor bg-back py-2 px-4 cursor-pointer border border-solid Z border-dangerColor ease-in duration-200 hover:bg-dangerColor hover:text-white"

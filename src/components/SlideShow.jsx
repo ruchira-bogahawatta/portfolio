@@ -27,10 +27,25 @@ const SlideShow = ({ imgUrl  }) => {
   return (
     <>
       <div className="h-[200px] sm:h-[230px] w-full relative group mb-5">
-        <div
+        {slides[currentIndex].url.endsWith(".mp4") ? (
+        <video
+          controls
+          autoPlay
+          loop
+          className="w-full h-full rounded-2xl"
+        >
+          <source src={slides[currentIndex].url} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      ) :
+        (        <div
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
-        ></div>
+        >
+
+        </div>)
+        }
+
         {/* Left Arrow */}
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
           <BsChevronCompactLeft onClick={prevSlide} size={30} />

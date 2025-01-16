@@ -27,7 +27,7 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               offset={0}
-              duration={500}
+              duration={80}
             >
               About
             </Link>
@@ -39,7 +39,7 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               offset={-100}
-              duration={500}
+              duration={80}
             >
               Skills
             </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               offset={-120}
-              duration={500}
+              duration={80}
             >
               Background
             </Link>
@@ -63,7 +63,7 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               offset={-150}
-              duration={500}
+              duration={80}
             >
               Projects
             </Link>
@@ -87,7 +87,7 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               offset={-100}
-              duration={500}
+              duration={80}
               className="nav-link flex items-center flex-col "
             >
               <FaUserAlt className="text-xl" />
@@ -101,7 +101,7 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               offset={-120}
-              duration={500}
+              duration={80}
               className="nav-link flex items-center flex-col "
             >
               <FaCoffee className="text-xl" />
@@ -115,7 +115,7 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               offset={-50}
-              duration={500}
+              duration={80}
               className="nav-link flex items-center flex-col "
             >
               <FaShapes className="text-xl " />
@@ -129,7 +129,7 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               offset={-40}
-              duration={500}
+              duration={80}
               className="nav-link flex items-center flex-col"
             >
               <FaCode className="text-xl " /> Projects

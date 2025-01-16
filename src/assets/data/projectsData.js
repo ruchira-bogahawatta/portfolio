@@ -4,10 +4,33 @@ import internarc from "../images/internarc.png";
 import internarc2 from "../images/internarc2.png";
 import nw from "../images/nw.png";
 import nw2 from "../images/nw2.png";
+import retailarva from "../images/retailarva.png";
+import hiredocs from "../images/hiredocs.png";
+import retailarvaVid from "../images/researchvid.mp4";
 
 const projects = [
   {
-    id: "01",
+    id: "05",
+    imgUrl: [hiredocs],
+    title: "HireDocs",
+    description:
+      "An ongoing MVC-based project designed to manage employees, generate and send contracts, shift email notifications, and monitor document history.",
+    technologies: ["SpringBoot", "NextJS", "MYSQL"],
+    siteUrl: "",
+    github: false,
+  },
+  {
+    id: "04",
+    imgUrl: [retailarva, retailarvaVid],
+    title: "RetailARVA",
+    description:
+      "An AR assistant powered by an LLM enhances customer engagement in mixed reality, answering queries, providing product info, and delivering personalized shopping assistance for an interactive retail experience.",
+    technologies: ["Unity", "C#", "Python", "LLM"],
+    siteUrl: "",
+    github: false,
+  },
+  {
+    id: "03",
     imgUrl: [ayura, ayura2],
     title: "Ayura (A Personal Health App)",
     description:
@@ -27,15 +50,16 @@ const projects = [
     github: true,
   },
   {
-    id: "03",
+    id: "01",
     imgUrl: [nw, nw2],
     title: "Northwest Website",
     description:
       "A WordPress site created for Northwest, a reputable staffing and recruitment agency based in New Zealand.",
     technologies: ["Wordpress"],
-    siteUrl: "https://northwestfacility.co.nz/",
+    siteUrl: "",
     github: false,
   },
+  
 ];
 
 export default projects;
