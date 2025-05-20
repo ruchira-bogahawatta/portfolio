@@ -8,7 +8,7 @@ import ctpLogo from "../assets/images/logos/ctp.svg";
 import nibmLogo from "../assets/images/logos/nibm.svg";
 import stjLogo from "../assets/images/logos/stj.svg";
 import ccLogo from "../assets/images/logos/cc.svg";
-
+import profileIcon from "../assets/images/profileIcon.png";
 
 const Background = () => {
   return (
@@ -35,7 +35,33 @@ const Background = () => {
               contentArrowStyle={{
                 borderRight: "7px solid  #3e3939",
               }}
-              date="2021 - Present"
+              date="April 2025 - Present"
+              iconStyle={{
+                background: "rgb(245, 245, 245)",
+                color: "#34be82",
+                boxShadow: "none",
+                border: "2px solid #cacaca",
+              }}
+              icon={<FaBriefcase />}
+            >
+              <h3 className="font-semibold text-sm md:text-base flex items-center gap-1">
+                <img src={profileIcon} className="rounded-full w-14" alt="ucsc logo" />
+                Freelance Web Developer
+              </h3>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--education"
+              contentStyle={{
+                background: "rgb(245, 245, 245)",
+                color: "#3e3939",
+                boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+                borderRadius: "0.8rem",
+                border: "1px solid rgba(202, 202, 202, 0.4)",
+              }}
+              contentArrowStyle={{
+                borderRight: "7px solid  #3e3939",
+              }}
+              date="2021 - April 2025"
               iconStyle={{
                 background: "rgb(245, 245, 245)",
                 color: "#34be82",
@@ -72,14 +98,15 @@ const Background = () => {
               }}
               icon={<FaBriefcase />}
             >
-
               <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-1">
-              <img src={mitlogo} className="rounded-full w-14" alt="mitesp logo" />
-              Software Engineer Intern</h3>
+                <img src={mitlogo} className="rounded-full w-14" alt="mitesp logo" />
+                Software Engineering Intern
+              </h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">MillenniumIT ESP</h4>
               <h4 className="!font-normal !m-0 !mt-2 text-justify text-xs md:text-base">
                 Contributed to the development of a real-world CSR project using JavaScript and Java
-                frameworks for the frontend and backend. Actively took part in code reviews and knowledge transfer sessions to enhance code quality, consistency, and team collaboration.
+                frameworks for the frontend and backend. Actively took part in code reviews and knowledge
+                transfer sessions to enhance code quality, consistency, and team collaboration.
               </h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -104,13 +131,14 @@ const Background = () => {
               icon={<FaBriefcase />}
             >
               <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-0">
-              <img src={ctpLogo} className="rounded-full w-14" alt="ctp logo" />
-                SEO & Digital Marketing Intern</h3>
+                <img src={ctpLogo} className="rounded-full w-14" alt="ctp logo" />
+                SEO & Digital Marketing Intern
+              </h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">Commercial Technologies Plus</h4>
               <h4 className="!font-normal !m-0 !mt-2 text-justify text-xs md:text-base">
-                Engaged in key aspects of digital marketing. This included SEO work on the Billable
-                Global website, alongside responsibilities in social media marketing and web content
-                development for various projects.
+                Engaged in key aspects of digital marketing. This included SEO work on the Billable Global
+                website, alongside responsibilities in social media marketing and web content development for
+                various projects.
               </h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -135,8 +163,9 @@ const Background = () => {
               icon={<FaGraduationCap />}
             >
               <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-0">
-              <img src={stjLogo} className="rounded-full w-12" alt="stj logo" />
-              St. Joseph’s College</h3>
+                <img src={stjLogo} className="rounded-full w-12" alt="stj logo" />
+                St. Joseph’s College
+              </h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">2A's 1B - GCE Advanced Level</h4>
               <h4 className="font-medium !m-0 !mt-2 text-xs md:text-base">Z-Score : 1.91</h4>
             </VerticalTimelineElement>
@@ -162,7 +191,7 @@ const Background = () => {
               icon={<FaAward />}
             >
               <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-0">
-              <img src={nibmLogo} className="rounded-full w-14" alt="nibm logo" />
+                <img src={nibmLogo} className="rounded-full w-14" alt="nibm logo" />
                 National Institute of Business Management
               </h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">Certificate in Computer Science</h4>
@@ -189,8 +218,9 @@ const Background = () => {
               icon={<FaGraduationCap />}
             >
               <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-0">
-              <img src={ccLogo} className="rounded-full w-12" alt="cc logo" />
-              Carey College</h3>
+                <img src={ccLogo} className="rounded-full w-12" alt="cc logo" />
+                Carey College
+              </h3>
               <h4 className="text-secondary m-0 text-sm md:text-base">8A's 1B - GCE Ordinary Level</h4>
             </VerticalTimelineElement>
           </VerticalTimeline>

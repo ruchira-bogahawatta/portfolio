@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row pt-[20%] sm:pt-0 sm:justify-center items-center h-full gap-2 sm:gap-8 sm:px-8">
           <div className="flex justify-center rounded-[50%] md:mb-5 ">
             <img
-            className="heroImage w-[100%] max-w-[300px] sm:max-w-[350px] heroFadeIn"
+              className="heroImage w-[100%] max-w-[300px] sm:max-w-[350px] heroFadeIn"
               src={profileImage}
               alt="Profile Image"
               loading="lazy"
@@ -27,7 +27,7 @@ const Hero = () => {
                   1000,
                   "A Full Stack Developer",
                   1000,
-                  "An Undergraduate at UCSC",
+                  "A Graduate of UCSC",
                   1000,
                 ]}
                 wrapper="span"
@@ -35,27 +35,22 @@ const Hero = () => {
                 repeat={Infinity}
               />
             </p>
-            <p className="text-primaryBlack font-normal text-center text-sm sm:text-lg px-5 sm:px-10 md:px-0 text-opacity-80 md:text-justify">
-              A driven undergraduate pursuing a BSc (Hons) in Information
-              Systems at the University of Colombo School of Computing with the
-              aim of building expertise in the field of Software Engineering
+            <p className="text-primaryBlack font-normal text-center text-sm sm:text-base px-5 sm:px-10 md:px-0 text-opacity-80 md:text-justify">
+              A recent graduate with a BSc (Hons) in Information Systems from the University of Colombo School
+              of Computing. I am currently on the lookout for opportunities to start my career in software
+              engineering, particularly interested in tackling real-world challenges, contributing to the
+              development of meaningful products, and growing into a well-rounded software engineer.
             </p>
             <div>
               {/* Social Icons */}
               <ul className="flex justify-center md:justify-start gap-4 mt-2">
                 <li className="text-primaryBlack opacity-40 text-3xl transition duration-300 ease-in-out hover:scale-110 hover:text-githubColor  hover:opacity-80 ">
-                  <a
-                    href="https://github.com/ruchira-bogahawatta"
-                    target="_blank"
-                  >
+                  <a href="https://github.com/ruchira-bogahawatta" target="_blank">
                     <FaGithub />
                   </a>
                 </li>
                 <li className="text-3xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-linkedlnColor  hover:opacity-100 ">
-                  <a
-                    href="https://www.linkedin.com/in/ruchira-bogahawatta"
-                    target="_blank"
-                  >
+                  <a href="https://www.linkedin.com/in/ruchira-bogahawatta" target="_blank">
                     <FaLinkedin />
                   </a>
                 </li>

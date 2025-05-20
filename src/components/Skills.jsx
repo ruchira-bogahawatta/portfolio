@@ -27,7 +27,7 @@ const Skills = () => {
           <h1 className="text-primaryBlack text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-1">
             Tech Stack
           </h1>
-          <p className="text-primaryBlack font-normal text-center text-sm sm:text-lg  my-5 sm:px-10 md:px-[5rem] text-opacity-40">
+          <p className="text-primaryBlack font-normal text-center text-xs sm:text-lg  my-5 sm:px-10 md:px-[5rem] text-opacity-40">
             Here is an overview of the technologies I have gained hands-on experience with, including various
             libraries and frameworks, up to this point
           </p>

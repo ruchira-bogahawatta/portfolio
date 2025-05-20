@@ -6,7 +6,7 @@ import nw from "../images/nw.png";
 import nw2 from "../images/nw2.png";
 import retailarva from "../images/retailarva.png";
 import hiredocs from "../images/hiredocs.png";
-import retailarvaVid from "../images/researchvid.mp4";
+import retailarvaVid from "../images/researchVid2.mp4";
 
 const projects = [
   {
@@ -26,8 +26,8 @@ const projects = [
     description:
       "An AR assistant powered by an LLM enhances customer engagement in mixed reality, answering queries, providing product info, and delivering personalized shopping assistance for an interactive retail experience.",
     technologies: ["Unity", "C#", "Python", "LLM"],
-    siteUrl: "",
-    github: false,
+    siteUrl: "https://github.com/ruchira-bogahawatta/RetailARVA_App.git",
+    github: true,
   },
   {
     id: "03",
@@ -49,17 +49,16 @@ const projects = [
     siteUrl: "https://github.com/ruchira-bogahawatta/Intern-Arc",
     github: true,
   },
-  {
-    id: "01",
-    imgUrl: [nw, nw2],
-    title: "Northwest Website",
-    description:
-      "A WordPress site created for Northwest, a reputable staffing and recruitment agency based in New Zealand.",
-    technologies: ["Wordpress"],
-    siteUrl: "",
-    github: false,
-  },
-  
+  // {
+  //   id: "01",
+  //   imgUrl: [nw, nw2],
+  //   title: "Northwest Website",
+  //   description:
+  //     "A WordPress site created for Northwest, a reputable staffing and recruitment agency based in New Zealand.",
+  //   technologies: ["Wordpress"],
+  //   siteUrl: "",
+  //   github: false,
+  // },
 ];
 
 export default projects;
