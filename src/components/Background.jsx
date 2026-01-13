@@ -8,7 +8,7 @@ import ctpLogo from "../assets/images/logos/ctp.svg";
 import nibmLogo from "../assets/images/logos/nibm.svg";
 import stjLogo from "../assets/images/logos/stj.svg";
 import ccLogo from "../assets/images/logos/cc.svg";
-import profileIcon from "../assets/images/profileIcon.png";
+import kaizensLogo from "../assets/images/logos/logo.webp";
 
 const Background = () => {
   return (
@@ -18,7 +18,7 @@ const Background = () => {
           Background
         </h1>
         <p className="text-primaryBlack font-normal text-center text-sm sm:text-lg px-5 sm:px-10 md:px-0 text-opacity-50 my-5">
-          An overview of my academic journey and professional experiences up to date
+          A look into my academic and professional journey so far.
         </p>
         {/* timeline */}
         <div className="w-[95%] md:w-[60%] lg:w-[60%] xl:w-[90%] xl:max-w-[1200px] ">
@@ -35,20 +35,24 @@ const Background = () => {
               contentArrowStyle={{
                 borderRight: "7px solid  #3e3939",
               }}
-              date="April 2025 - Present"
+              date="June 2025 - Present"
               iconStyle={{
                 background: "rgb(245, 245, 245)",
-                color: "#34be82",
+                color: "#FF9013",
                 boxShadow: "none",
                 border: "2px solid #cacaca",
               }}
               icon={<FaBriefcase />}
             >
-              <h3 className="font-semibold text-sm md:text-base flex items-center gap-1">
-                <img src={profileIcon} className="rounded-full w-14" alt="ucsc logo" />
-                Freelance Web Developer
+              <h3 className="font-bold mb-3 text-sm md:text-base flex items-center gap-1">
+                <img src={kaizensLogo} className="rounded-full w-14" alt="mitesp logo" />
+                Software Engineer
               </h3>
+              <h4 className="text-secondary m-0 text-sm md:text-base font-semibold">Kaizens Group</h4>
+              <h4 className="!font-normal !m-0 !mt-2 text-justify text-xs md:text-base">
+Work on internal tools and client projects involving full-stack development and IFS reporting. Coordinate with development and cross-functional teams through design and implementation to ensure timely delivery.              </h4>
             </VerticalTimelineElement>
+
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
               contentStyle={{
@@ -61,21 +65,22 @@ const Background = () => {
               contentArrowStyle={{
                 borderRight: "7px solid  #3e3939",
               }}
-              date="2021 - April 2025"
+              date="2021 - May 2025"
               iconStyle={{
                 background: "rgb(245, 245, 245)",
-                color: "#34be82",
+                color: "#FF9013",
                 boxShadow: "none",
                 border: "2px solid #cacaca",
               }}
               icon={<FaGraduationCap />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-1">
+              <h3 className="font-bold mb-3 text-sm md:text-base flex items-center gap-1">
                 <img src={ucscLogo} className="rounded-full w-14" alt="ucsc logo" />
                 University of Colombo School of Computing
               </h3>
-              <h4 className="text-secondary m-0 text-sm md:text-base">BSc. (Hons) in Information Systems</h4>
-              <h4 className=" font-medium !m-0 !mt-2 text-xs md:text-base">CGPA : 3.74</h4>
+              <h4 className="text-secondary m-0 text-sm md:text-base font-semibold">BSc. (Hons) in Information Systems</h4>
+              <h4 className=" font-medium !m-0 !mt-2 text-xs md:text-base">CGPA : 3.79 (First Class)</h4>
+              <h4 className="!m-0 !mt-2 text-xs md:text-base">Recognized on the Directors List for Years 2 to 4 (2022 -  2024)</h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
@@ -92,17 +97,17 @@ const Background = () => {
               date="Nov 2023 - May 2024"
               iconStyle={{
                 background: "rgb(245, 245, 245)",
-                color: "#34be82",
+                color: "#FF9013",
                 boxShadow: "none",
                 border: "2px solid #cacaca",
               }}
               icon={<FaBriefcase />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-1">
+              <h3 className="font-bold mb-3 text-sm md:text-base flex items-center gap-1">
                 <img src={mitlogo} className="rounded-full w-14" alt="mitesp logo" />
                 Software Engineering Intern
               </h3>
-              <h4 className="text-secondary m-0 text-sm md:text-base">MillenniumIT ESP</h4>
+              <h4 className="text-secondary m-0 text-sm md:text-base font-semibold">MillenniumIT ESP</h4>
               <h4 className="!font-normal !m-0 !mt-2 text-justify text-xs md:text-base">
                 Contributed to the development of a real-world CSR project using JavaScript and Java
                 frameworks for the frontend and backend. Actively took part in code reviews and knowledge
@@ -124,17 +129,17 @@ const Background = () => {
               date="Dec 2021 - Jul 2022"
               iconStyle={{
                 background: "rgb(245, 245, 245)",
-                color: "#34be82",
+                color: "#FF9013",
                 boxShadow: "none",
                 border: "2px solid #cacaca",
               }}
               icon={<FaBriefcase />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-0">
+              <h3 className="font-bold mb-3 text-sm md:text-base flex items-center gap-0">
                 <img src={ctpLogo} className="rounded-full w-14" alt="ctp logo" />
                 SEO & Digital Marketing Intern
               </h3>
-              <h4 className="text-secondary m-0 text-sm md:text-base">Commercial Technologies Plus</h4>
+              <h4 className="text-secondary m-0 text-sm md:text-base font-semibold">Commercial Technologies Plus</h4>
               <h4 className="!font-normal !m-0 !mt-2 text-justify text-xs md:text-base">
                 Engaged in key aspects of digital marketing. This included SEO work on the Billable Global
                 website, alongside responsibilities in social media marketing and web content development for
@@ -156,17 +161,17 @@ const Background = () => {
               date="2019"
               iconStyle={{
                 background: "rgb(245, 245, 245)",
-                color: "#34be82",
+                color: "#FF9013",
                 boxShadow: "none",
                 border: "2px solid #cacaca",
               }}
               icon={<FaGraduationCap />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-0">
+              <h3 className="font-bold mb-3 text-sm md:text-base flex items-center gap-0">
                 <img src={stjLogo} className="rounded-full w-12" alt="stj logo" />
                 St. Joseph’s College
               </h3>
-              <h4 className="text-secondary m-0 text-sm md:text-base">2A's 1B - GCE Advanced Level</h4>
+              <h4 className="text-secondary m-0 text-sm md:text-base font-semibold">2A's 1B - GCE Advanced Level</h4>
               <h4 className="font-medium !m-0 !mt-2 text-xs md:text-base">Z-Score : 1.91</h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -184,17 +189,17 @@ const Background = () => {
               date="2017"
               iconStyle={{
                 background: "rgb(245, 245, 245)",
-                color: "#34be82",
+                color: "#FF9013",
                 boxShadow: "none",
                 border: "2px solid #cacaca",
               }}
               icon={<FaAward />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-0">
+              <h3 className="font-bold mb-3 text-sm md:text-base flex items-center gap-0">
                 <img src={nibmLogo} className="rounded-full w-14" alt="nibm logo" />
                 National Institute of Business Management
               </h3>
-              <h4 className="text-secondary m-0 text-sm md:text-base">Certificate in Computer Science</h4>
+              <h4 className="text-secondary m-0 text-sm md:text-base font-semibold">Certificate in Computer Science</h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
@@ -211,17 +216,17 @@ const Background = () => {
               date="2016"
               iconStyle={{
                 background: "rgb(245, 245, 245)",
-                color: "#34be82",
+                color: "#FF9013",
                 boxShadow: "none",
                 border: "2px solid #cacaca",
               }}
               icon={<FaGraduationCap />}
             >
-              <h3 className="font-semibold mb-3 text-sm md:text-base flex items-center gap-0">
+              <h3 className="font-bold mb-3 text-sm md:text-base flex items-center gap-0">
                 <img src={ccLogo} className="rounded-full w-12" alt="cc logo" />
                 Carey College
               </h3>
-              <h4 className="text-secondary m-0 text-sm md:text-base">8A's 1B - GCE Ordinary Level</h4>
+              <h4 className="text-secondary m-0 text-sm md:text-base font-semibold">8A's 1B - GCE Ordinary Level</h4>
             </VerticalTimelineElement>
           </VerticalTimeline>
         </div>

@@ -13,7 +13,7 @@ import react from "../assets/images/technologies/react.svg";
 import tailwindcss from "../assets/images/technologies/tailwindcss.svg";
 import wordpress from "../assets/images/technologies/wordpress.svg";
 import css from "../assets/images/technologies/css3.svg";
-import dart from "../assets/images/technologies/dart.svg";
+import ifs from "../assets/images/technologies/ifs.png";
 import mysql from "../assets/images/technologies/mysql.svg";
 import mongodb from "../assets/images/technologies/mongodb.svg";
 import java from "../assets/images/technologies/java.svg";
@@ -42,7 +42,6 @@ const Skills = () => {
               <SkillCard IconUrl={react} alt="React" />
               <SkillCard IconUrl={flutter} alt="Flutter" scale={0.9} />
               <SkillCard IconUrl={tailwindcss} alt="TailwindCSS" additionalClass="scale-[1.6]" />
-              <SkillCard IconUrl={dart} alt="Dart" scale={0.5} />
               <SkillCard IconUrl={html} alt="HTML" />
               <SkillCard IconUrl={javascript} alt="Javascript" scale={90} />
               <SkillCard IconUrl={css} alt="CSS" scale={90} />
@@ -55,12 +54,11 @@ const Skills = () => {
             </div>
             <div className="grid grid-cols-2  lg:grid-cols-3 gap-5 text-center px-2 lg:px-8">
               <SkillCard IconUrl={java} alt="Java" />
-              <SkillCard IconUrl={nodeJs} alt="Node Js" additionalClass="md:scale-150" />
-              <SkillCard IconUrl={php} alt="PHP" />
               <SkillCard IconUrl={cSharp} alt="c#" scale={90} />
+              <SkillCard IconUrl={dotNet} alt="DotNet" scale={90} />
+              {/* <SkillCard IconUrl={nodeJs} alt="Node Js" additionalClass="md:scale-150" /> */}
               <SkillCard IconUrl={springboot} alt="SpringBoot" additionalClass="scale-[1.6]" />
-
-              {/* <SkillCard IconUrl={dotNet} alt="DotNet" scale={90} /> */}
+              <SkillCard IconUrl={ifs} alt="IFS" additionalClass="scale-[1.6]" />
 
               {/* <SkillCard
                 IconUrl={express}

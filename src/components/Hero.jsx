@@ -24,11 +24,11 @@ const Hero = () => {
               <TypeAnimation
                 sequence={[
                   "I'm Ruchira Bogahawatta",
-                  1000,
-                  "A Full Stack Developer",
-                  1000,
-                  "A Graduate of UCSC",
-                  1000,
+                  2000,
+                  "A UCSC Graduate",
+                  2000,
+                  "A Software Engineer",
+                  2000,
                 ]}
                 wrapper="span"
                 speed={50}
@@ -36,10 +36,8 @@ const Hero = () => {
               />
             </p>
             <p className="text-primaryBlack font-normal text-center text-sm sm:text-base px-5 sm:px-10 md:px-0 text-opacity-80 md:text-justify">
-              A recent graduate with a BSc (Hons) in Information Systems from the University of Colombo School
-              of Computing. I am currently on the lookout for opportunities to start my career in software
-              engineering, particularly interested in tackling real-world challenges, contributing to the
-              development of meaningful products, and growing into a well-rounded software engineer.
+              A BSc (Hons) Information Systems graduate from the University of Colombo School of Computing,
+              with hands-on experience in full-stack development, IFS reporting, and automation tools. Enjoy collaborating with teams to turn ideas into real solutions, bringing creativity, practicality, and focus to every project.
             </p>
             <div>
               {/* Social Icons */}

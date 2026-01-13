@@ -5,8 +5,8 @@ export default {
     extend: {
       colors: {
         primaryBlack: "#3E3939",
-        secondary: "#34BE82",
-        secondaryAccent: "#1aaf6e",
+        secondary: "#FF9013",
+        secondaryAccent: "#75B06F",
         greyColor: "#cacaca",
         backgroundColor: "#F5F5F5",
         githubColor: "#25195c",

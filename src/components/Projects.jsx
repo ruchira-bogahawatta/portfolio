@@ -34,7 +34,7 @@ const Projects = () => {
                 <div className="w-full h-full flex items-center justify-center">
                   <button
                     onClick={() => showModalHandler(project.id)}
-                    className="bg-secondary px-4 py-2 rounded-md text-white font-normal text-sm hover:bg-secondaryAccent ease-in duration-200"
+                    className="bg-[#fead4f]  px-4 py-2 rounded-md text-white font-normal text-sm hover:bg-[#FF9013] ease-in duration-200"
                   >
                     See Details
                   </button>
