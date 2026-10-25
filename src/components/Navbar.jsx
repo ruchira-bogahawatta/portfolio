@@ -1,150 +1,80 @@
-import React, { useState } from "react";
-import { Link } from "react-scroll";
-import {
-  FaBars,
-  FaTimes,
-  FaCode,
-  FaUserAlt,
-  FaCoffee,
-  FaShapes,
-} from "react-icons/fa";
+import { useState } from "react";
+import { FaBars, FaTimes, FaCode, FaUserAlt, FaCoffee, FaShapes } from "react-icons/fa";
+import { cn } from "@/lib/utils";
+import { useActiveSection } from "@/hooks/use-active-section";
+
+const links = [
+  { id: "hero", label: "About", icon: FaUserAlt },
+  { id: "skills", label: "Skills", icon: FaCoffee },
+  { id: "background", label: "Background", icon: FaShapes },
+  { id: "projects", label: "Projects", icon: FaCode },
+];
+
+const sectionIds = links.map((link) => link.id);
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const handleClick = () => setNav(!nav);
+  const activeId = useActiveSection(sectionIds);
 
   return (
     <>
-      <div className="hidden md:flex fixed w-full justify-center left-0 top-2 z-30">
+      <nav className="hidden md:flex fixed w-full justify-center left-0 top-2 z-30">
         {/* Main Menu */}
-        <ul
-          className="py-4 px-8 md:flex group gap-8 rounded-3xl bg-white text-center shadow-boxShadowOne text-primaryBlack cursor-pointer font-medium"
-        >
-          <li className="nav-link font-medium">
-            <Link
-              activeClass="active"
-              to="hero"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={80}
-            >
-              About
-            </Link>
-          </li>
-          <li className="nav-link font-medium">
-            <Link
-              activeClass="active"
-              to="skills"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={80}
-            >
-              Skills
-            </Link>
-          </li>
-          <li className="nav-link font-medium">
-            <Link
-              activeClass="active"
-              to="background"
-              spy={true}
-              smooth={true}
-              offset={-120}
-              duration={80}
-            >
-              Background
-            </Link>
-          </li>
-          <li className="nav-link font-medium">
-            <Link
-              activeClass="active"
-              to="projects"
-              spy={true}
-              smooth={true}
-              offset={-150}
-              duration={80}
-            >
-              Projects
-            </Link>
-          </li>
+        <ul className="py-4 px-8 md:flex gap-8 rounded-3xl bg-white text-center shadow-boxShadowOne text-primaryBlack font-medium">
+          {links.map(({ id, label }) => (
+            <li key={id}>
+              <a
+                href={`#${id}`}
+                aria-current={activeId === id ? "true" : undefined}
+                className={cn(
+                  "border-b-2 border-transparent transition-all duration-300 hover:text-brand",
+                  activeId === id && "text-brand border-brand"
+                )}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
-      </div>
+      </nav>
 
       {/* Mobile Menu */}
-      <div
+      <nav
         className={
           !nav
             ? "hidden"
-            : "md:hidden fixed justify-center p-3 bottom-0 right-0 bg-white rounded-tl-3xl rounded-tr-3xl  z-40 shadow-md shadow-[#cacaca] "
+            : "md:hidden fixed justify-center p-3 bottom-0 right-0 bg-white rounded-tl-3xl rounded-tr-3xl z-40 shadow-md shadow-greyColor"
         }
       >
-        <ul className="pb-[3.5rem] pt-6 px-5 md:flex w-full grid grid-cols-2 grid-rows-2 gap-8 text-center  ">
-          <li className=" flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer active:text-gray-300 group">
-            <Link
-              activeClass="active"
-              to="hero"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={80}
-              className="nav-link flex items-center flex-col "
-            >
-              <FaUserAlt className="text-xl" />
-              About
-            </Link>
-          </li>
-          <li className="flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer group">
-            <Link
-              activeClass="active"
-              to="skills"
-              spy={true}
-              smooth={true}
-              offset={-120}
-              duration={80}
-              className="nav-link flex items-center flex-col "
-            >
-              <FaCoffee className="text-xl" />
-              Skills
-            </Link>
-          </li>
-          <li className="flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer group ">
-            <Link
-              activeClass="active"
-              to="background"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={80}
-              className="nav-link flex items-center flex-col "
-            >
-              <FaShapes className="text-xl " />
-              Background
-            </Link>
-          </li>
-          <li className="flex flex-col gap-1 items-center text-sm text-greyColor cursor-pointer group ">
-            <Link
-              activeClass="active"
-              to="projects"
-              spy={true}
-              smooth={true}
-              offset={-40}
-              duration={80}
-              className="nav-link flex items-center flex-col"
-            >
-              <FaCode className="text-xl " /> Projects
-            </Link>
-          </li>
+        <ul className="pb-14 pt-6 px-5 w-full grid grid-cols-2 grid-rows-2 gap-8 text-center">
+          {links.map(({ id, label, icon: Icon }) => (
+            <li key={id} className="flex flex-col gap-1 items-center text-sm">
+              <a
+                href={`#${id}`}
+                onClick={() => setNav(false)}
+                className={cn(
+                  "flex items-center flex-col transition-colors hover:text-brand",
+                  activeId === id ? "text-brand" : "text-greyColor"
+                )}
+              >
+                <Icon className="text-xl" />
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
-      </div>
+      </nav>
 
       {/* Close Icon or Hamburger Item */}
-      <div
-        onClick={handleClick}
-        className="md:hidden right-4 fixed bottom-4 border border-greyColor p-2 rounded-md cursor-pointer z-40 text-greyColor bg-white shadow-md shadow-[#cacaca]"
+      <button
+        type="button"
+        onClick={() => setNav(!nav)}
+        aria-label={nav ? "Close menu" : "Open menu"}
+        aria-expanded={nav}
+        className="md:hidden right-4 fixed bottom-4 border border-greyColor p-2 rounded-md z-40 text-greyColor bg-white shadow-md shadow-greyColor"
       >
-        {!nav ? <FaBars className="text-2xl"/> : <FaTimes className="text-2xl" />}
-      </div>
+        {!nav ? <FaBars className="text-2xl" /> : <FaTimes className="text-2xl" />}
+      </button>
     </>
   );
 };

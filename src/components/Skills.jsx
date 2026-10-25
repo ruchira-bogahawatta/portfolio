@@ -7,8 +7,8 @@ import springboot from "../assets/images/technologies/springboot.svg";
 import flutter from "../assets/images/technologies/flutter.svg";
 import html from "../assets/images/technologies/html.svg";
 import javascript from "../assets/images/technologies/javascript.svg";
-import nodeJs from "../assets/images/technologies/nodejs.svg";
-import php from "../assets/images/technologies/php.svg";
+// import nodeJs from "../assets/images/technologies/nodejs.svg";
+// import php from "../assets/images/technologies/php.svg";
 import react from "../assets/images/technologies/react.svg";
 import tailwindcss from "../assets/images/technologies/tailwindcss.svg";
 import wordpress from "../assets/images/technologies/wordpress.svg";
@@ -22,12 +22,12 @@ import SkillCard from "./SkillCard";
 const Skills = () => {
   return (
     <>
-      <section id="skills" className="w-full h-full min-h-[100vh] p-5 md:mt-[12%] lg:mt-[10%]">
+      <section id="skills" className="w-full h-full min-h-screen p-5 md:mt-[12%] lg:mt-[10%] scroll-mt-24">
         <div className="flex w-full flex-col items-center">
-          <h1 className="text-primaryBlack text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-1">
+          <h2 className="text-primaryBlack text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-1">
             Tech Stack
-          </h1>
-          <p className="text-primaryBlack font-normal text-center text-xs sm:text-lg  my-5 sm:px-10 md:px-[5rem] text-opacity-40">
+          </h2>
+          <p className="text-primaryBlack/40 font-normal text-center text-xs sm:text-lg my-5 sm:px-10 md:px-20">
             Here is an overview of the technologies I have gained hands-on experience with, including various
             libraries and frameworks, up to this point
           </p>
@@ -35,7 +35,7 @@ const Skills = () => {
         <div className="flex justify-center flex-col md:flex-row w-full gap-10 sm:gap-8 mt-5">
           <div className="w-full px-5 md:px-0">
             <div className="flex justify-center mb-5">
-              <h2 className="font-medium text-primaryBlack">Front-End</h2>
+              <h3 className="font-medium text-primaryBlack">Front-End</h3>
             </div>
             <div className="grid grid-cols-2  md:grid-cols-3 gap-5 text-center px-2 lg:px-8">
               <SkillCard IconUrl={nextJs} alt="Next JS" scale={90} />
@@ -50,7 +50,7 @@ const Skills = () => {
           </div>
           <div className="w-full px-5 md:px-0 mb-8 md:mb-0">
             <div className="flex justify-center mb-5">
-              <h2 className="font-medium text-primaryBlack">Back-End & DBMS</h2>
+              <h3 className="font-medium text-primaryBlack">Back-End & DBMS</h3>
             </div>
             <div className="grid grid-cols-2  lg:grid-cols-3 gap-5 text-center px-2 lg:px-8">
               <SkillCard IconUrl={java} alt="Java" />

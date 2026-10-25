@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="main-container">
+    <div className="flex flex-col gap-8">
       <Navbar />
       <Hero />
       <Skills />

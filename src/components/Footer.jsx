@@ -12,21 +12,22 @@ const Footer = () => {
   return (
     <>
       <section className="w-full flex justify-center items-center">
-        <div className="bg-white shadow-md shadow-[#cacaca] rounded-3xl  max-w-[380px] p-5 my-10 flex gap-4 items-center">
+        <div className="bg-white shadow-md shadow-greyColor rounded-3xl  max-w-[380px] p-5 my-10 flex gap-4 items-center">
           <img
             src={profileImg}
             alt="Profile Image"
             id="footerImage"
-            className="heroImage rounded-full h-[80px] w-[80px] object-cover hover:scale-110 shadow-md shadow-[#cacaca] transition-all ease-in-out duration-800"
+            className="heroImage rounded-full h-[80px] w-[80px] object-cover hover:scale-110 shadow-md shadow-greyColor transition-all ease-in-out duration-800"
           />
           <div className="flex gap-1 flex-col items-start">
-            <h2 className="text-primaryBlack text-lg lg:text-2xl font-['Dancing_Script'] m-auto font-medium text-opacity-70">
+            <h2 className="text-primaryBlack/70 text-lg lg:text-2xl font-['Dancing_Script'] m-auto font-medium">
               Ruchira Bogahawatta
             </h2>
             <div className="flex items-center gap-3">
               <a
                 href="https://www.linkedin.com/in/ruchira-bogahawatta"
                 target="_blank"
+                rel="noreferrer"
                 className="text-2xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-linkedlnColor hover:opacity-100 "
               >
                 <FaLinkedin />
@@ -34,6 +35,7 @@ const Footer = () => {
               <a
                 href="https://github.com/ruchira-bogahawatta"
                 target="_blank"
+                rel="noreferrer"
                 className="text-2xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-githubColor  hover:opacity-80 "
               >
                 <FaGithub />
@@ -41,6 +43,7 @@ const Footer = () => {
               <a
                 href="https://www.facebook.com/ruchira.bogahawatta/"
                 target="_blank"
+                rel="noreferrer"
                 className="text-2xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-linkedlnColor  hover:opacity-80 "
               >
                 <FaFacebookSquare />
@@ -48,6 +51,7 @@ const Footer = () => {
               <a
                 href="mailto:ruchira.bogahawatta@gmail.com"
                 target="_blank"
+                rel="noreferrer"
                 className="text-2xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-primaryBlack  hover:opacity-90 "
               >
                 <MdAttachEmail />
