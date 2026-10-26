@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { cn } from "@/lib/utils";
 
 const links = [
+  { id: "hero", label: "About" },
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
@@ -32,13 +33,10 @@ const Navbar = ({ activeId }) => {
   };
 
   return (
-    <header className="sticky top-0 z-20 border-b border-line bg-paper/95 backdrop-blur-sm">
-      <nav aria-label="Main" className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-5 sm:px-8">
-        <a href="#hero" className="font-semibold tracking-tight">
-          Ruchira Bogahawatta
-        </a>
-
-        <ul className="hidden items-center gap-7 text-sm md:flex">
+    <header>
+      {/* Desktop: a floating menu centred at the top */}
+      <nav aria-label="Main" className="fixed inset-x-0 top-4 z-20 hidden justify-center md:flex">
+        <ul className="flex items-center gap-7 rounded-full border border-line bg-paper/95 px-7 py-2.5 text-sm backdrop-blur-sm">
           {links.map(({ id, label }) => (
             <li key={id}>
               <a
@@ -51,10 +49,13 @@ const Navbar = ({ activeId }) => {
             </li>
           ))}
         </ul>
+      </nav>
 
+      {/* Phone: a floating menu button in the top-right corner */}
+      <div className="fixed top-4 right-4 z-20 md:hidden">
         <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" aria-label="Open menu" className="md:hidden">
+            <Button variant="outline" size="icon" aria-label="Open menu" className="size-11 rounded-full bg-paper/95">
               <Menu className="size-5" />
             </Button>
           </SheetTrigger>
@@ -75,7 +76,7 @@ const Navbar = ({ activeId }) => {
             </ul>
           </SheetContent>
         </Sheet>
-      </nav>
+      </div>
     </header>
   );
 };

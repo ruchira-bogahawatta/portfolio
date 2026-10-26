@@ -13,7 +13,7 @@ const Hero = () => {
   const typed = useTypewriter(phrases);
 
   return (
-    <section id="hero" className="scroll-mt-24 py-16 md:py-24">
+    <section id="hero" className="scroll-mt-24 pt-24 pb-16 md:py-28">
       <div className="flex flex-col items-center gap-10 md:flex-row md:gap-16">
         <img
           src={profileImage}

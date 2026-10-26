@@ -14,7 +14,10 @@ const typeIcons = {
 const TypeIcon = ({ type }) => {
   const { icon: Icon, label } = typeIcons[type];
   return (
-    <span title={label} className="shrink-0 rounded-md border border-line p-1.5 text-ink-soft">
+    <span
+      title={label}
+      className="absolute top-5 right-5 shrink-0 rounded-md border border-line p-1.5 text-ink-soft sm:static"
+    >
       <Icon className="size-4" aria-hidden="true" />
       <span className="sr-only">{label}</span>
     </span>
@@ -85,7 +88,7 @@ const Background = () => {
                 {/* Card */}
                 <article
                   className={cn(
-                    "col-start-2 mt-4 rounded-xl border border-line p-5 md:row-start-1 md:mt-0 md:p-6",
+                    "relative col-start-2 mt-4 rounded-xl border border-line p-5 md:row-start-1 md:mt-0 md:p-6",
                     cardLeft ? "md:col-start-1" : "md:col-start-3"
                   )}
                 >
@@ -94,7 +97,7 @@ const Background = () => {
                       src={entry.logo}
                       alt=""
                       loading="lazy"
-                      className="h-12 w-auto max-w-32 shrink-0 object-contain"
+                      className="h-12 w-auto max-w-32 shrink-0 self-start object-contain"
                     />
                     <div className="min-w-0 flex-1">
                       <div className="flex items-start justify-between gap-4">
@@ -105,7 +108,7 @@ const Background = () => {
                     </div>
                   </div>
                   {entry.details.length > 0 && (
-                    <div className="mt-4 space-y-2 text-[0.95rem]">
+                    <div className="mt-4 space-y-2">
                       {entry.details.map((detail) => (
                         <p key={detail}>{detail}</p>
                       ))}

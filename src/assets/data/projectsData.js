@@ -16,7 +16,7 @@ const projects = [
     id: "northwest-finance",
     imgUrl: [northwestFinance, northwestFinance2],
     title: "Northwest Finance",
-    kind: "Marketing site and online loan application",
+    kind: "Corporate Website",
     description:
       "A website for a New Zealand finance company featuring a repayment calculator and an online loan application with document uploads and email notifications.",
     technologies: ["Next.js", "React", "TypeScript", "Zod", "Vercel"],
@@ -27,7 +27,7 @@ const projects = [
     id: "northwest-recruitment",
     imgUrl: [northwestRecruitment, northwestRecruitment2],
     title: "Northwest Recruitment",
-    kind: "Marketing site with job listings",
+    kind: "Corporate Website",
     description:
       "A website for an Auckland-based facility services company showcasing its services and providing an online form for requesting quotes.",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
@@ -38,7 +38,7 @@ const projects = [
     id: "northwest-facility",
     imgUrl: [northwestFacility, northwestFacility2],
     title: "Northwest Facility",
-    kind: "Marketing site for facility services",
+    kind: "Corporate Website",
     description:
       "Website for a cleaning and facility management company in Auckland: service pages, a quote form with confirmation emails, and search-friendly metadata, sitemap and canonical URLs on every page.",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],

@@ -43,6 +43,10 @@
 @theme inline {
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 
+  /* body copy runs at 0.9rem; `text-base` matches it so the two never disagree */
+  --text-base: 0.9rem;
+  --text-base--line-height: 1.6;
+
   --color-paper: var(--paper);
   --color-paper-soft: var(--paper-soft);
   --color-ink: var(--ink);
@@ -91,6 +95,7 @@
   body {
     background-color: var(--paper);
     color: var(--ink);
+    font-size: 0.9rem;
     line-height: 1.6;
   }
   h1,
