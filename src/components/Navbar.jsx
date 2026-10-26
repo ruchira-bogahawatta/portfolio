@@ -1,81 +1,82 @@
-import { useState } from "react";
-import { FaBars, FaTimes, FaCode, FaUserAlt, FaCoffee, FaShapes } from "react-icons/fa";
+import { useRef, useState } from "react";
+import { Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { useActiveSection } from "@/hooks/use-active-section";
 
 const links = [
-  { id: "hero", label: "About", icon: FaUserAlt },
-  { id: "skills", label: "Skills", icon: FaCoffee },
-  { id: "background", label: "Background", icon: FaShapes },
-  { id: "projects", label: "Projects", icon: FaCode },
+  { id: "skills", label: "Skills" },
+  { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
+  { id: "contact", label: "Contact" },
 ];
 
-const sectionIds = links.map((link) => link.id);
+const Navbar = ({ activeId }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const pendingTarget = useRef(null);
 
-const Navbar = () => {
-  const [nav, setNav] = useState(false);
-  const activeId = useActiveSection(sectionIds);
+  // The open sheet locks page scroll, so jump to the section only once it has closed
+  const handleMenuLink = (event, id) => {
+    event.preventDefault();
+    pendingTarget.current = id;
+    setMenuOpen(false);
+  };
+
+  const handleMenuClosed = (event) => {
+    const id = pendingTarget.current;
+    if (!id) return;
+    event.preventDefault();
+    pendingTarget.current = null;
+    document.getElementById(id)?.scrollIntoView();
+    window.history.replaceState(null, "", `#${id}`);
+  };
 
   return (
-    <>
-      <nav className="hidden md:flex fixed w-full justify-center left-0 top-2 z-30">
-        {/* Main Menu */}
-        <ul className="py-4 px-8 md:flex gap-8 rounded-3xl bg-white text-center shadow-boxShadowOne text-primaryBlack font-medium">
+    <header className="sticky top-0 z-20 border-b border-line bg-paper/95 backdrop-blur-sm">
+      <nav aria-label="Main" className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-5 sm:px-8">
+        <a href="#hero" className="font-semibold tracking-tight">
+          Ruchira Bogahawatta
+        </a>
+
+        <ul className="hidden items-center gap-7 text-sm md:flex">
           {links.map(({ id, label }) => (
             <li key={id}>
               <a
                 href={`#${id}`}
                 aria-current={activeId === id ? "true" : undefined}
-                className={cn(
-                  "border-b-2 border-transparent transition-all duration-300 hover:text-brand",
-                  activeId === id && "text-brand border-brand"
-                )}
+                className={cn("link text-ink-soft hover:text-ink", activeId === id && "text-ink")}
               >
                 {label}
               </a>
             </li>
           ))}
         </ul>
-      </nav>
 
-      {/* Mobile Menu */}
-      <nav
-        className={
-          !nav
-            ? "hidden"
-            : "md:hidden fixed justify-center p-3 bottom-0 right-0 bg-white rounded-tl-3xl rounded-tr-3xl z-40 shadow-md shadow-greyColor"
-        }
-      >
-        <ul className="pb-14 pt-6 px-5 w-full grid grid-cols-2 grid-rows-2 gap-8 text-center">
-          {links.map(({ id, label, icon: Icon }) => (
-            <li key={id} className="flex flex-col gap-1 items-center text-sm">
-              <a
-                href={`#${id}`}
-                onClick={() => setNav(false)}
-                className={cn(
-                  "flex items-center flex-col transition-colors hover:text-brand",
-                  activeId === id ? "text-brand" : "text-greyColor"
-                )}
-              >
-                <Icon className="text-xl" />
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" aria-label="Open menu" className="md:hidden">
+              <Menu className="size-5" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="top" onCloseAutoFocus={handleMenuClosed} className="gap-0 px-5 pt-16 pb-8">
+            <SheetTitle className="sr-only">Sections</SheetTitle>
+            <ul className="flex flex-col">
+              {links.map(({ id, label }) => (
+                <li key={id}>
+                  <a
+                    href={`#${id}`}
+                    onClick={(event) => handleMenuLink(event, id)}
+                    className="block py-2.5 text-base font-medium"
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </SheetContent>
+        </Sheet>
       </nav>
-
-      {/* Close Icon or Hamburger Item */}
-      <button
-        type="button"
-        onClick={() => setNav(!nav)}
-        aria-label={nav ? "Close menu" : "Open menu"}
-        aria-expanded={nav}
-        className="md:hidden right-4 fixed bottom-4 border border-greyColor p-2 rounded-md z-40 text-greyColor bg-white shadow-md shadow-greyColor"
-      >
-        {!nav ? <FaBars className="text-2xl" /> : <FaTimes className="text-2xl" />}
-      </button>
-    </>
+    </header>
   );
 };
 

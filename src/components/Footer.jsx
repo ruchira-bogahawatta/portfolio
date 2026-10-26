@@ -1,66 +1,31 @@
-import React from "react";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaFacebookSquare,
-  FaInstagram,
-} from "react-icons/fa";
-import { MdAttachEmail } from "react-icons/md";
-import profileImg from "../assets/images/profileImg.jpg";
+const links = [
+  { label: "GitHub", href: "https://github.com/ruchira-bogahawatta" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/ruchira-bogahawatta" },
+  { label: "Facebook", href: "https://www.facebook.com/ruchira.bogahawatta/" },
+  { label: "Email", href: "mailto:ruchira.bogahawatta@gmail.com" },
+];
 
 const Footer = () => {
   return (
-    <>
-      <section className="w-full flex justify-center items-center">
-        <div className="bg-white shadow-md shadow-greyColor rounded-3xl  max-w-[380px] p-5 my-10 flex gap-4 items-center">
-          <img
-            src={profileImg}
-            alt="Profile Image"
-            id="footerImage"
-            className="heroImage rounded-full h-[80px] w-[80px] object-cover hover:scale-110 shadow-md shadow-greyColor transition-all ease-in-out duration-800"
-          />
-          <div className="flex gap-1 flex-col items-start">
-            <h2 className="text-primaryBlack/70 text-lg lg:text-2xl font-['Dancing_Script'] m-auto font-medium">
-              Ruchira Bogahawatta
-            </h2>
-            <div className="flex items-center gap-3">
+    <footer className="border-t border-line">
+      <div className="mx-auto flex w-full max-w-5xl flex-col gap-3 px-5 py-8 text-sm text-ink-soft sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <p>© {new Date().getFullYear()} Ruchira Bogahawatta</p>
+        <ul className="flex flex-wrap gap-x-6 gap-y-1">
+          {links.map((link) => (
+            <li key={link.label}>
               <a
-                href="https://www.linkedin.com/in/ruchira-bogahawatta"
-                target="_blank"
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
-                className="text-2xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-linkedlnColor hover:opacity-100 "
+                className="link hover:text-ink"
               >
-                <FaLinkedin />
+                {link.label}
               </a>
-              <a
-                href="https://github.com/ruchira-bogahawatta"
-                target="_blank"
-                rel="noreferrer"
-                className="text-2xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-githubColor  hover:opacity-80 "
-              >
-                <FaGithub />
-              </a>
-              <a
-                href="https://www.facebook.com/ruchira.bogahawatta/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-2xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-linkedlnColor  hover:opacity-80 "
-              >
-                <FaFacebookSquare />
-              </a>
-              <a
-                href="mailto:ruchira.bogahawatta@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-                className="text-2xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-primaryBlack  hover:opacity-90 "
-              >
-                <MdAttachEmail />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </footer>
   );
 };
 

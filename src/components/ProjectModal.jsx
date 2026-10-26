@@ -1,15 +1,6 @@
 import { FaGithub, FaArrowRight } from "react-icons/fa";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import SlideShow from "./SlideShow";
 
 const ProjectModal = ({ project, open, onOpenChange }) => {
@@ -17,40 +8,31 @@ const ProjectModal = ({ project, open, onOpenChange }) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="max-h-[calc(100svh-2rem)] gap-0 overflow-y-auto p-0 sm:max-w-2xl">
         <SlideShow imgUrl={project.imgUrl} title={project.title} />
-        <DialogHeader>
-          <DialogTitle className="text-base md:text-xl">{project.title}</DialogTitle>
-          <DialogDescription className="text-primaryBlack">{project.description}</DialogDescription>
-        </DialogHeader>
-        <div className="flex items-center flex-wrap gap-2">
-          <span className="font-medium text-sm">Technologies:</span>
-          {project.technologies.map((item) => (
-            <Badge key={item} variant="secondary">
-              {item}
-            </Badge>
-          ))}
-        </div>
-        <DialogFooter>
+        <div className="flex flex-col gap-4 p-6 sm:p-8">
+          <DialogHeader className="gap-1 text-left">
+            <DialogTitle className="text-2xl font-semibold tracking-tight">{project.title}</DialogTitle>
+            <p className="text-sm text-ink-soft">{project.kind}</p>
+          </DialogHeader>
+          <DialogDescription className="text-base text-ink">{project.description}</DialogDescription>
+          <p className="text-sm text-ink-soft">Built with {project.technologies.join(", ")}</p>
           {project.siteUrl && (
-            <Button asChild>
+            <Button asChild className="h-10 self-start px-4">
               <a href={project.siteUrl} target="_blank" rel="noreferrer">
                 {project.github ? (
                   <>
-                    <FaGithub /> Code
+                    <FaGithub /> View the code
                   </>
                 ) : (
                   <>
-                    View <FaArrowRight />
+                    Visit the site <FaArrowRight />
                   </>
                 )}
               </a>
             </Button>
           )}
-          <DialogClose asChild>
-            <Button variant="outline">Close</Button>
-          </DialogClose>
-        </DialogFooter>
+        </div>
       </DialogContent>
     </Dialog>
   );

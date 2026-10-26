@@ -1,48 +1,58 @@
-import profileImage from "../assets/images/heroImage.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import profileImage from "../assets/images/heroImage.png";
+import { useTypewriter } from "@/hooks/use-typewriter";
+
+const phrases = ["I'm Ruchira Bogahawatta", "A UCSC Graduate", "A Software Engineer"];
+
+const socials = [
+  { label: "GitHub", href: "https://github.com/ruchira-bogahawatta", icon: FaGithub },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/ruchira-bogahawatta", icon: FaLinkedin },
+];
 
 const Hero = () => {
+  const typed = useTypewriter(phrases);
+
   return (
-    <>
-      <section id="hero" className="w-full h-screen">
-        <div className="flex flex-col md:flex-row pt-[20%] sm:pt-0 sm:justify-center items-center h-full gap-2 sm:gap-8 sm:px-8">
-          <div className="flex justify-center rounded-[50%] md:mb-5 ">
-            <img
-              className="heroImage w-full max-w-[300px] sm:max-w-[350px]"
-              src={profileImage}
-              alt="Profile Image"
-            />
-          </div>
-          <div className="flex flex-col text-center md:w-[50%] md:text-left">
-            <h1 className="text-primaryBlack text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-1">
-              Hello there!
-            </h1>
-            <p className="text-brand font-medium md:font-normal text-lg sm:text-xl md:text-2xl mb-3">
-              I&apos;m Ruchira Bogahawatta, a Software Engineer
-            </p>
-            <p className="text-primaryBlack/80 font-normal text-center text-sm sm:text-base px-5 sm:px-10 md:px-0 md:text-justify">
-              A BSc (Hons) Information Systems graduate from the University of Colombo School of Computing,
-              with hands-on experience in full-stack development, IFS reporting, and automation tools. Enjoy collaborating with teams to turn ideas into real solutions, bringing creativity, practicality, and focus to every project.
-            </p>
-            <div>
-              {/* Social Icons */}
-              <ul className="flex justify-center md:justify-start gap-4 mt-2">
-                <li className="text-primaryBlack opacity-40 text-3xl transition duration-300 ease-in-out hover:scale-110 hover:text-githubColor  hover:opacity-80 ">
-                  <a href="https://github.com/ruchira-bogahawatta" target="_blank" rel="noreferrer" aria-label="GitHub">
-                    <FaGithub />
-                  </a>
-                </li>
-                <li className="text-3xl text-primaryBlack opacity-40 transition duration-300 ease-in-out hover:scale-110 hover:text-linkedlnColor  hover:opacity-100 ">
-                  <a href="https://www.linkedin.com/in/ruchira-bogahawatta" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                    <FaLinkedin />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <section id="hero" className="scroll-mt-24 py-16 md:py-24">
+      <div className="flex flex-col items-center gap-10 md:flex-row md:gap-16">
+        <img
+          src={profileImage}
+          alt="Cartoon of Ruchira with a Siamese cat"
+          width="375"
+          height="375"
+          className="heroImage w-full max-w-[280px] shrink-0 md:max-w-[340px]"
+        />
+        <div className="text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl">Hello there!</h1>
+          <p className="mt-3 min-h-[1.6em] text-xl font-medium text-brand md:text-2xl" aria-live="polite">
+            {typed}
+            <span className="cursor" aria-hidden="true" />
+          </p>
+          <p className="mt-5 max-w-[60ch] text-ink-soft md:text-lg">
+            Software Engineer at Kaizens Group and a First Class Honours graduate in Information Systems from the
+            University of Colombo School of Computing. I work with C#/.NET, React, Next.js and relational
+            databases, and look after Linux and Windows servers, deployments and domain configuration. I enjoy
+            turning ideas into real solutions with a team, and I&apos;m always learning something new.
+          </p>
+          <ul className="mt-6 flex justify-center gap-5 md:justify-start">
+            {socials.map(({ label, href, icon: Icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                  className="block text-3xl text-ink-soft transition-colors hover:text-ink"
+                >
+                  <Icon />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
+
 export default Hero;

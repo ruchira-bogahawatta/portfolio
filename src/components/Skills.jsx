@@ -1,78 +1,52 @@
-import React from "react";
-import cSharp from "../assets/images/technologies/csharp.svg";
-import dotNet from "../assets/images/technologies/dotnet.svg";
-import nextJs from "../assets/images/technologies/next-js.svg";
-// import express from "../assets/images/technologies/express.svg";
-import springboot from "../assets/images/technologies/springboot.svg";
-import flutter from "../assets/images/technologies/flutter.svg";
-import html from "../assets/images/technologies/html.svg";
-import javascript from "../assets/images/technologies/javascript.svg";
-// import nodeJs from "../assets/images/technologies/nodejs.svg";
-// import php from "../assets/images/technologies/php.svg";
-import react from "../assets/images/technologies/react.svg";
-import tailwindcss from "../assets/images/technologies/tailwindcss.svg";
-import wordpress from "../assets/images/technologies/wordpress.svg";
-import css from "../assets/images/technologies/css3.svg";
-import ifs from "../assets/images/technologies/ifs.png";
-import mysql from "../assets/images/technologies/mysql.svg";
-import mongodb from "../assets/images/technologies/mongodb.svg";
-import java from "../assets/images/technologies/java.svg";
-import SkillCard from "./SkillCard";
+import skills from "../assets/data/skillsData";
+import SectionHeading from "./SectionHeading";
+import { useReveal } from "@/hooks/use-reveal";
 
 const Skills = () => {
+  const ref = useReveal();
+
   return (
-    <>
-      <section id="skills" className="w-full h-full min-h-screen p-5 md:mt-[12%] lg:mt-[10%] scroll-mt-24">
-        <div className="flex w-full flex-col items-center">
-          <h2 className="text-primaryBlack text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-1">
-            Tech Stack
-          </h2>
-          <p className="text-primaryBlack/40 font-normal text-center text-xs sm:text-lg my-5 sm:px-10 md:px-20">
-            Here is an overview of the technologies I have gained hands-on experience with, including various
-            libraries and frameworks, up to this point
-          </p>
-        </div>
-        <div className="flex justify-center flex-col md:flex-row w-full gap-10 sm:gap-8 mt-5">
-          <div className="w-full px-5 md:px-0">
-            <div className="flex justify-center mb-5">
-              <h3 className="font-medium text-primaryBlack">Front-End</h3>
-            </div>
-            <div className="grid grid-cols-2  md:grid-cols-3 gap-5 text-center px-2 lg:px-8">
-              <SkillCard IconUrl={nextJs} alt="Next JS" scale={90} />
-              <SkillCard IconUrl={react} alt="React" />
-              <SkillCard IconUrl={flutter} alt="Flutter" scale={0.9} />
-              <SkillCard IconUrl={tailwindcss} alt="TailwindCSS" additionalClass="scale-[1.6]" />
-              <SkillCard IconUrl={html} alt="HTML" />
-              <SkillCard IconUrl={javascript} alt="Javascript" scale={90} />
-              <SkillCard IconUrl={css} alt="CSS" scale={90} />
-              <SkillCard IconUrl={wordpress} alt="Wordpress" />
-            </div>
+    <section id="skills" ref={ref} className="scroll-mt-24 py-16 md:py-24">
+      <SectionHeading
+        title="Tech stack"
+        note="Technologies I have hands-on experience with, including libraries and frameworks."
+      />
+      <dl className="flex flex-col gap-8">
+        {skills.map((group, index) => (
+          <div
+            key={group.area}
+            data-reveal
+            style={{ "--i": index + 1 }}
+            className="grid gap-3 sm:grid-cols-[9rem_minmax(0,1fr)] sm:gap-6"
+          >
+            <dt className="text-sm font-medium text-ink-soft sm:pt-2.5">{group.area}</dt>
+            <dd>
+              <ul className="flex flex-wrap gap-2">
+                {group.items.map(({ name, icon: Icon, color, platforms }) => (
+                  <li
+                    key={name}
+                    className="inline-flex items-center gap-2.5 rounded-lg border border-line px-3.5 py-2 text-sm font-medium transition-colors hover:border-line-strong hover:bg-paper-soft"
+                  >
+                    <Icon className="size-4 shrink-0" style={{ color }} aria-hidden="true" />
+                    {name}
+                    {platforms && (
+                      <span className="ml-1 inline-flex items-center gap-2 border-l border-line pl-2.5">
+                        {platforms.map((platform) => (
+                          <span key={platform.name} title={platform.name}>
+                            <platform.icon className="size-4" style={{ color: platform.color }} aria-hidden="true" />
+                            <span className="sr-only">{platform.name}</span>
+                          </span>
+                        ))}
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </dd>
           </div>
-          <div className="w-full px-5 md:px-0 mb-8 md:mb-0">
-            <div className="flex justify-center mb-5">
-              <h3 className="font-medium text-primaryBlack">Back-End & DBMS</h3>
-            </div>
-            <div className="grid grid-cols-2  lg:grid-cols-3 gap-5 text-center px-2 lg:px-8">
-              <SkillCard IconUrl={java} alt="Java" />
-              <SkillCard IconUrl={cSharp} alt="c#" scale={90} />
-              <SkillCard IconUrl={dotNet} alt="DotNet" scale={90} />
-              {/* <SkillCard IconUrl={nodeJs} alt="Node Js" additionalClass="md:scale-150" /> */}
-              <SkillCard IconUrl={springboot} alt="SpringBoot" additionalClass="scale-[1.6]" />
-              <SkillCard IconUrl={ifs} alt="IFS" additionalClass="scale-[1.6]" />
-
-              {/* <SkillCard
-                IconUrl={express}
-                alt="Express"
-                additionalClass="md:scale-125"
-              /> */}
-
-              <SkillCard IconUrl={mongodb} alt="MongoDB" additionalClass="md:scale-125" />
-              <SkillCard IconUrl={mysql} alt="MYSQL" additionalClass="md:scale-125" />
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+        ))}
+      </dl>
+    </section>
   );
 };
 
